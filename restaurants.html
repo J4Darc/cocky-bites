@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Styled Page</title>
+  <link rel="stylesheet" href="colors.css">
+</head>
+</html>
+
+<style>
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: #264653;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .nav-buttons button {
+      background-color: #1b1817;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #1b1817;
+    }
+
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .button-container {
+    display: flex;
+    justify-content: center;     /* Center the buttons horizontally */
+    align-items: center;         /* Vertically center if needed */
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%;                 /* Ensure full width for centering */
+    }
+
+  .oval-button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #555;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+  .oval-button:hover {
+    background-color: #f0f0f0;
+    }
+
+
+</style>
+
+    <header>
+    <div class="header-container">
+      <div class="logo">🍽️</div>
+      <div class="nav-buttons">
+        <button>Dining Hall</button>
+        <button>Campus Restaurants</button>
+        <button>Resource Page</button>
+        <button>Share Your Bite</button>
+        <button>About Us</button>
+      </div>
+    </div>
+    
+    <h1>TOP SPOTS! Breakfast, Lunch and Dinner</h1>
+  </header>
+
+  <body>
+  <section class="top-spots-grid">
+    
+
+    <div class="grid-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+      <!-- Chick-fil-A -->
+      <article class="grid-item" style="flex: 1; min-width: 250px; max-width: 300px; text-align: center;">
+        <img src="placeholder-chickfila.jpg" alt="Chick-fil-A" class="spot-img" style="width: 100%; height: auto;">
+        <div class="desc-box">
+        <h3>Chick-fil-A</h3>
+        <p><strong>Hours:</strong> Monday–Saturday: 7:30am–10:00pm, Sunday: Closed</p>
+        <p><strong>Location:</strong> 737 Gadsden St, Columbia, SC 29201</p>
+        <p><strong>Description:</strong> Takes MPD or credit cards. Includes the full Chick-fil-A menu, unlike the Russell House location, such as the pretzel bun chicken sandwich, frosted lemonades, and milkshakes. Their crispy chicken is served for breakfast in a sandwich and chicken mini form, and they also have breakfast burritos. The price for food can be as low as $6 for a single entrée.</p>
+      </div>
+      </article>
+
+      <!-- Southern Belly BBQ -->
+      <article class="grid-item" style="flex: 1; min-width: 250px; max-width: 300px; text-align: center;">
+        <img src="placeholder-bbq.jpg" alt="Southern Belly BBQ" class="spot-img" style="width: 100%; height: auto;">
+        <div class="desc-box">
+        <h3>Southern Belly BBQ</h3>
+        <p><strong>Hours:</strong> Sunday: 11:00am–2:30pm, Monday: Closed, Tuesday–Friday: 11:00am–8:30pm, Saturday: 1:00am–8:30pm</p>
+        <p><strong>Location:</strong> 700 Lincoln Street, Suite 200, Columbia, SC 29201</p>
+        <p><strong>Description:</strong> A Southern food specialty restaurant with fried chicken, burgers, Cajun pasta, steak frites, cheesecakes, and monthly specials. Food pricing usually begins at $8, but you're swiping for bold flavors, quality meals, and the southern experience.</p>
+      </div>
+      </article>
+
+      <!-- Breakfast Jawn -->
+      <article class="grid-item" style="flex: 1; min-width: 250px; max-width: 300px; text-align: center;">
+        <img src="placeholder-breakfast.jpg" alt="Breakfast Jawn" class="spot-img" style="width: 100%; height: auto;">
+        <div class="desc-box">
+        <h3>Breakfast Jawn</h3>
+        <p><strong>Hours:</strong> Weekdays from 8:30am to 1:00pm</p>
+        <p><strong>Location:</strong> Right next to the Colloquium Cafe outside of Gambrell Hall</p>
+        <p><strong>Description:</strong> Go-to for customizable breakfast such as breakfast burritos, burrito bowls, pancakes (plain or chocolate chip), or sandwiches with your choice of protein and toppings like cheese, potatoes, bacon, turkey, or sausage. It’s a little pricey for a breakfast swipe starting at $9, however, it’s worth the stretch for many students on campus.</p>
+      </div>
+      </article>
+    </div>
+  </section>
+</body>
+
+<section class="restaurant-buttons">
+  <div class="button-container">
+    <button class="oval-button">Breakfast Jawn</button>
+    <button class="oval-button">Golden Spur</button>
+    <button class="oval-button">Chick-fil-A</button>
+    <button class="oval-button">Starbucks</button>
+  </div>
+</section>

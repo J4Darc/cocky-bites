@@ -89,20 +89,21 @@
         </div
   
         h2 class="footer-title">Cocky Bites</h2>
-        <form class="feedback-form">
-          <div class="input-row">
-            <input type="text" placeholder="First name" name="first-name">
-            <input type="text" placeholder="Last name" name="last-name">
-          </div>
-          <input type="email" placeholder="Email address" name="email">
-          <textarea placeholder="Tell us what you want to see to improve your experience!" name="message"></textarea>
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
-      
-        <div class="mascot">
-          <img src="images/cockybiteslogo.png" alt="Cocky Logo">
-        </div>
-      </footer>
+        <label for="review-type">Food Reviews or Tips & Tricks:</label>
+                <select id="review-type" name="review-type">
+                    <option value="food-review">Food Reviews</option>
+                    <option value="tips-tricks">Tips & Tricks</option>
+                </select>
+                <textarea id="user-review" name="user-review" rows="5" placeholder="Enter your thoughts here..."></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2025 Share Your Bite. All rights reserved.</p>
+    </footer>
 </body>
+
+
 </html>

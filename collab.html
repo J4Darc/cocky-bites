@@ -1,28 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Share Your Bite</title>
-    <link rel="stylesheet" href="collab.css">
-</head>
+  <meta charset="UTF-8">
+  <title>Cocky Bites</title>
+  <link rel="stylesheet" href="colorstwo.css">
 
+  <style>
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: #264653;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .nav-buttons button {
+      background-color: #1b1817;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #1b1817;
+    }
+
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .tips-section {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tips-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .cocky-footer {
+      background-color: #800000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons img {
+      width: 30px;
+      margin: 0 10px;
+    }
+
+    .feedback-form {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .submit-btn {
+      background-color: #264653;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .mascot img {
+      width: 100px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
 <body>
-    <header>
-        <nav>
-            <a href="homepage.html"><img src="path/to/profile-placeholder.png" alt="Waiter Cocky"></a>
-            <a href="dining.html">Dining Hall </a> &nbsp;
-            <a href="restaurants.html">Campus Spots</a> &nbsp;
-            <a href="resource.html">Resource Page</a> &nbsp;
-            <a href="yourbite.html">Share Your Bite</a> &nbsp;
-            <a href="index.html">About Us</a>
-            
-        </nav>
-        <div class="header-container">
-            <h1>Campus Eats, Cocky Critiques</h1>
-        </div>
-    </header>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">🍽️</div>
+      <div class="nav-buttons">
+        <button>Dining Hall</button>
+        <button>Campus Restaurants</button>
+        <button>Resource Page</button>
+        <button>Share Your Bite</button>
+        <button>About Us</button>
+      </div>
+    </div>
+    <h1>TOP SPOTS! Breakfast, Lunch and Dinner</h1>
+  </header>
+
+  <section>
+    <h2 style="color:#e76f51; margin-top:30px;">Tip Of The Day!</h2>
+    <p style="font-size:1rem; padding:10px;">Order your food before you start your trip so the food is hot and ready when you arrive—no waiting in lines!</p>
+  </section>
+
+  <section class="tips-section">
+    <h2 style="color:#264653; margin-top:20px;">Tips!</h2>
+    <ul class="tips-list">
+      <li><strong>End of the week:</strong> Use your remaining swipes on Wednesday, because they reset on Thursday.</li>
+      <li><strong>Maximize a swipe:</strong> Order nachos instead of a bowl from Qdoba so the chips come with your meal, and you don’t have to pay extra for it.</li>
+      <li><strong>Free Food:</strong> Utilize periods on campus when free food is offered.</li>
+      <li><strong>Sundays:</strong> Chick-fil-a is closed, so if you want Panera Bread like everyone else, order an hour early!</li>
+      <li><strong>Carolina Cash in the real world:</strong> Tropical Cafe under 650 Lincoln accepts Carolina Cash.</li>
+      <li><strong>Fancy Dinner:</strong> Reserve a reservation at Top Of Carolina for a 360 view of Columbia while fine dining! They also accept Carolina Cash.</li>
+      <li><strong>Unlimited Food:</strong> Eat as much and as long as you want in any UofSC Dining Hall for 1 meal swipe. There’s unlimited swipes for freshmen!</li>
+    </ul>
+  </section>
+
 
     <main>
       <section id="info">
@@ -88,3 +216,4 @@
 </body>
 
 </html>
+

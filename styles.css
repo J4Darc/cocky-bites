@@ -13,7 +13,7 @@ body {
 }
 
 img {
-    max-width: 40%;
+    max-width: 100%;
     display: block;
 }
 
@@ -172,4 +172,5 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+
 

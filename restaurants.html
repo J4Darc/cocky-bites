@@ -5,109 +5,28 @@
   <title>My Styled Page</title>
   <link rel="stylesheet" href="colors.css">
 </head>
-</html>
 
-<style>
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 10px 20px;
-    }
-
-    .logo {
-      width: 60px;
-      height: 60px;
-      background-color: #264653;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex: 1;
-    }
-
-    .nav-buttons button {
-      background-color: #1b1817;
-      border: none;
-      border-radius: 25px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav-buttons button:hover {
-      background-color: #1b1817;
-    }
-
-    header {
-      background-color: #800000;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-    }
-
-    .button-container {
-    display: flex;
-    justify-content: center;     /* Center the buttons horizontally */
-    align-items: center;         /* Vertically center if needed */
-    gap: 15px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-    width: 100%;                 /* Ensure full width for centering */
-    }
-
-  .oval-button {
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: 2px solid #555;
-    background-color: #fff;
-    color: #333;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    }
-
-  .oval-button:hover {
-    background-color: #f0f0f0;
-    }
-
-
-</style>
-
-    <header>
-    <div class="header-container">
-      <div class="logo">🍽️</div>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">
+        <img src="images/CockyBitesLogo.png" alt="Cocky Logo">
+      </a>
       <div class="nav-buttons">
-        <button>Dining Hall</button>
-        <button>Campus Restaurants</button>
-        <button>Resource Page</button>
-        <button>Share Your Bite</button>
-        <button>About Us</button>
+        <a href="dininghalls.html" class="nav-button">Dining Halls</a>
+        <a href="restaurants.html" class="nav-button">Campus Restaurants</a>
+        <a href="resource.html" class="nav-button">Resource Page</a>
+        <a href="yourbite.html" class="nav-button">Share Your Bite</a>
+        <a href="about.html" class="nav-button">About Us</a>
       </div>
+    </nav>
+  
+    <div class="header-container">
+      <h1>Campus Eats, Cocky Critiques</h1>
     </div>
-    
-    <h1>TOP SPOTS! Breakfast, Lunch and Dinner</h1>
   </header>
-
-  <body>
+  
+  <main>
   <section class="top-spots-grid">
     
 
@@ -146,7 +65,7 @@
       </article>
     </div>
   </section>
-</body>
+
 
 <section class="restaurant-buttons">
   <div class="button-container">
@@ -156,3 +75,7 @@
     <button class="oval-button">Starbucks</button>
   </div>
 </section>
+  </main>
+</body>
+</html>
+

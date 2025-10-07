@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Styled Page</title>
+  <link rel="stylesheet" href="colors.css">
+  <style>
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: #264653;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .nav-buttons button {
+      background-color: #1b1817;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #333;
+    }
+
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .oval-button {
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 2px solid #555;
+      background-color: #fff;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .oval-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .grid-item {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .spot-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .desc-box {
+      padding: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .nav-button {
+      text-decoration: none;
+      background-color: #264653;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+.nav-button:hover {
+      background-color: #000000;
+    }
+
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #ddd;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #555;
+      border: 2px dashed #aaa;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .stars {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: red;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+  <nav class="nav-buttons">
+    <a href="index.html">
+      <img src="images/CockyBitesLogo.png" alt="Cocky Logo">
+    </a>
+    <a href="dininghalls.html" class="nav-button">Dining Hall</a>
+    <a href="restaurants.html" class="nav-button">Campus Spots</a>
+    <a href="resource.html" class="nav-button">Resource Page</a>
+    <a href="yourbite.html" class="nav-button">Share Your Bite</a>
+    <a href="about.html" class="nav-button">About Us</a>
+  </nav>
+  <div class="header-container">
+    <h1>Campus Eats, Cocky Critiques</h1>
+  </div>
+</header>
+
+  <section class="top-spots-grid">
+    <div class="grid-container">
+      <!-- Chick-fil-A -->
+      <article class="grid-item">
+        <img src="placeholder-chickfila.jpg" alt="Chick-fil-A" class="spot-img">
+        <div class="desc-box">
+          <h3>Chick-fil-A</h3>
+          <p><strong>Hours:</strong> Monday–Saturday: 7:30am–10:00pm, Sunday: Closed</p>
+          <p><strong>Location:</strong> 737 Gadsden St, Columbia, SC 29201</p>
+          <p><strong>Description:</strong> Takes MPD or credit cards. Includes the full Chick-fil-A menu, unlike the Russell House location, such as the pretzel bun chicken sandwich, frosted lemonades, and milkshakes. Their crispy chicken is served for breakfast in a sandwich and chicken mini form, and they also have breakfast burritos. The price for food can be as low as $6 for a single entrée.</p>
+        </div>
+      </article>
+
+      <!-- Southern Belly BBQ -->
+      <article class="grid-item">
+        <img src="placeholder-bbq.jpg" alt="The Golden Spur" class="spot-img">
+        <div class="desc-box">
+          <h3>The Golden Spur</h3>
+          <p><strong>Hours:</strong> Sunday: 11:00am–2:30pm, Monday: Closed, Tuesday–Friday: 11:00am–8:30pm, Saturday: 1:00am–8:30pm</p>
+          <p><strong>Location:</strong> 700 Lincoln Street, Suite 200, Columbia, SC 29201</p>
+          <p><strong>Description:</strong> A Southern food specialty restaurant with fried chicken, burgers, Cajun pasta, steak frites, cheesecakes, and monthly specials. Food pricing usually begins at $8, but you're swiping for bold flavors, quality meals, and the southern experience.</p>
+        </div>
+      </article>
+
+      <!-- Breakfast Jawn -->
+      <article class="grid-item">
+        <img src="placeholder-breakfast.jpg" alt="Breakfast Jawn" class="spot-img">
+        <div class="desc-box">
+          <h3>Breakfast Jawn</h3>
+          <p><strong>Hours:</strong> Weekdays from 8:30am to 1:00pm</p>
+          <p><strong>Location:</strong> Right next to the Colloquium Cafe outside of Gambrell Hall</p>
+          <p><strong>Description:</strong> Go-to for customizable breakfast such as breakfast burritos, burrito bowls, pancakes (plain or chocolate chip), or sandwiches with your choice of protein and toppings like cheese, potatoes, bacon, turkey, or sausage. It’s a little pricey for a breakfast swipe starting at $9, however, it’s worth the stretch for many students on campus.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="restaurant-buttons">
+    <div class="button-container">
+      <button class="oval-button">Breakfast Jawn</button>
+      <button class="oval-button">Golden Spur</button>
+      <button class="oval-button">Chick-fil-A</button>
+      <button class="oval-button">Starbucks</button>
+    </div>
+  </section>
+
+  <body>
+
+  <div class="container">
+    <!-- Left Column: Image Placeholders -->
+    <div class="column">
+      <div class="image-placeholder">Main Interior Image</div>
+      <div class="image-placeholder">Drink Image 1</div>
+    </div>
+
+    <!-- Right Column: Description -->
+    <div class="column">
+      <div class="description">
+        <h2>T-Coop Starbucks</h2>
+        <p><strong>Location:</strong> T-Coop Main Level</p>
+        <p><strong>Hours:</strong></p>
+        <ul>
+          <li>Monday–Thursday: 7:30 a.m. – 11 p.m.</li>
+          <li>Friday: 7:30 a.m. – 6 p.m.</li>
+          <li>Saturday: 11 a.m. – 4 p.m.</li>
+          <li>Sunday: 11 a.m. – 11 p.m.</li>
+        </ul>
+        <p><strong>Features:</strong> Full Starbucks menu</p>
+        <p><strong>Payment:</strong> Accepts Carolina Cash or Carolina Swipe</p>
+        <p><em>The perfect fuel to push through your library endeavors!</em></p>
+      </div>
+
+      <!-- Red Stars -->
+      <div class="stars">★ ★ ★ ★ ★</div>
+    </div>
+  </div>
+
+</body>
+
+ <div>
+      <h2 class="footer-title">Cocky Bites</h2>
+    </div>
+
+    <div>
+      <form class="feedback-form">
+        <div class="input-row">
+          <input type="text" placeholder="First name" name="first-name">
+          <input type="text" placeholder="Last name" name="last-name">
+        </div>
+        <input type="email" placeholder="Email address" name="email">
+        <textarea placeholder="Tell us what you want to see to improve your experience!" name="message"></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    
+    <div class="mascot">
+        <img src="images/CockyBitesLogo.png" alt="Cocky Bites">
+    </div>
+    <div>
+        <p>&copy; 2025 Share Your Bite. All rights reserved.</p>
+    </div>
+    </footer>
+</body>
+
+
+
+</body>
+</html>

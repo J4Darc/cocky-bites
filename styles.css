@@ -210,6 +210,15 @@ h3 {
   height: 100px;
 }
 
+/* Index.HTML Page */
+
+insidecv-img {
+    width: 60%
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radisu: 10px; 
+}
 
 /* ---------- Post Feedback Section ---------- 
 .post-feedback form {
@@ -270,4 +279,5 @@ footer a:hover {
 }
 
 -----*/
+
 

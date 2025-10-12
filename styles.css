@@ -212,12 +212,36 @@ h3 {
 
 /* Index.HTML Page */
 
-.insidecv-img {
-    width: 10%
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radisu: 10px; 
+.page-cockybites main img {
+  display: block;
+  margin: 12px auto;
+  height: auto;
+  border-radius: 8px; /* optional */
+}
+
+/* Hero/collage image */
+.page-cockybites .cocky-layout-img {
+  width: 70%;
+  max-width: 900px;
+}
+
+/* Card images (tweak to taste) */
+.page-cockybites .secondlayout-img,
+.page-cockybites .insidecv-img {
+  width: 60%;
+  max-width: 800px;
+}
+
+.page-cockybites .insidegs-img {
+  width: 65%;
+  max-width: 850px;
+}
+
+.page-cockybites .gardeng-img,
+.page-cockybites .blenz-img,
+.page-cockybites .dd-img {
+  width: 50%;
+  max-width: 700px;
 }
 
 /* ---------- Post Feedback Section ---------- 
@@ -279,6 +303,7 @@ footer a:hover {
 }
 
 -----*/
+
 
 
 

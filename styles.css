@@ -227,13 +227,13 @@ h3 {
 
 /* Card images (tweak to taste) */
 .page-cockybites .secondlayout-img {
-  width: 100%;
-  max-width: 300px;
+  width: 70%;
+  max-width: 900px;
 } 
 
 .page-cockybites .insidecv-img {
-  width: 100%;
-  max-width: 150px;
+  width: 40%;
+  max-width: 300px;
 }
 
 .page-cockybites .insidegs-img {
@@ -308,6 +308,7 @@ footer a:hover {
 }
 
 -----*/
+
 
 
 

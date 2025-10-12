@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bite In, Gamecocks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+     <header>
+      <nav class="nav-bar">
+        <a href="index.html" class="logo">
+        </a>
+        <div class="nav-buttons">
+          <a href="dininghalls.html" class="nav-button">Dining Halls</a>
+          <a href="restaurants.html" class="nav-button">Campus Restaurants</a>
+          <a href="resource.html" class="nav-button">Resource Page</a>
+          <a href="yourbite.html" class="nav-button">Share Your Bite</a>
+          <a href="about.html" class="nav-button">About Us</a>
+          <a href="restaurantstwo.html" class="nav-button">Testing</a>
+        </div>
+      </nav>
+    </header>
+  
+<main>
+  <section id="content">    
+      <h2>Bite In, Gamecocks</h2>
+      <p class="lede">
+        Hungry on campus? We’ve got you covered. Cocky Bites is your go-to guide for all things dining at the University of South Carolina. From honest reviews of dining halls and campus restaurants to tips and tricks for making the most of your meal plan, we’re here to help you find the best bites around. Whether you’re looking for a quick snack between classes, the best study spot with food, or hidden gems you didn’t know existed, Cocky Bites will point you in the right direction.
+      </p>
+    </section>
+
+   
+    <section aria-labelledby="collage-heading" class="section">
+        <img src="images/LayoutCockyDining.png" alt="First Cocky Layout" />
+    </section>
+
+    <section class="Latest Updates"></section>
+        <h3 class="section-title">Latest Updates</h3>
+    </section>
+    <!-- Latest Updates -->
+    <section class="section">
+      <div class="updates-grid">
+        <article class="card">
+          <img src="images/secondcockylayout.png" alt="Second" class="secondlayout-img" />
+          <div class="card-body">
+            <h4>Campus Village Pavillion</h4>
+            <p>"The Pavilion (also known as the Path) will be opening at 9 am on Saturday game days!"</p>
+            <img src="images/insidecv.png" alt="Inside CV" class="insidecv-img" />
+        </div>
+        </article>
+        <article class="card">
+          <img src="images/insidegarnetstation.png" alt="Inside GarnetStation" class="insidegs-img" />
+          <div class="card-body">
+            <h4>Garnet Station</h4>
+            <p>What was once Gamecock Park has been re imagined into a brand-new dining space with 500 seats, seven stations, and both indoor and outdoor options. And here’s the twist: what used to be on the second floor is now right on the first — making it easier than ever to grab a bite.</p>
+          </div>
+        </article>
+        <article class="card">
+]          <div class="card-body">
+            <h4>Campus Restaurants</h4>
+            <img src="images/gardengrill.jpg" alt=" Garden Grill" class="gardeng-img" />
+            <p>The Garden Grill is a patio-only dining spot, so its hours depend on the weather. It serves up burgers, sandwiches, and salads. Right now, the Garden Grill is closed, but it’s set to reopen in Summer 2026.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/blenz.jpg" alt="Blenz" class="blenz-img"/>
+          <h4>Blenz</h4>
+          <div class="card-body">
+            <p>What was previously Berry Bliss downstairs is now Blenz. They serve pitaya and açaí bowls with 5+ toppings, along with a variety of smoothies.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/dunkindonutslogo.jpg" alt="Dunkin Donuts" class="dd-img"/>
+          <h4>Dunkin Donuts</h4>
+          <div class="card-body">
+            <p>Dunkin’ Donuts is coming soon! Opening later in the Fall 2025 semester, it’ll be located in the Science and Technology Building — so you can grab your coffee (and a donut or two) right on the way to class.</p>
+      </div>
+      </article>
+    </section>
+
+    <!-- Contact / Share -->
+     <!-- FOOTER AND CONTACT -->
+<footer class="cocky-footer">
+    <div class="social-icons">
+        <a href="#"><img src="images/facebooklogo.png" alt="Facebook"></a>
+        <a href="#"><img src="images/linkedinlogo.png" alt="Linkedin"></a>
+        <a href="#"><img src="images/youtubelogo.jpg" alt="Youtube"></a>
+        <a href="#"><img src="images/instagramlogo.jpg" alt="Instagram"></a>
+    </div>
+    
+    <div>
+      <h2 class="footer-title">Cocky Bites</h2>
+    </div>
+
+    <div>
+      <form class="feedback-form">
+        <div class="input-row">
+          <input type="text" placeholder="First name" name="first-name">
+          <input type="text" placeholder="Last name" name="last-name">
+        </div>
+        <input type="email" placeholder="Email address" name="email">
+        <textarea placeholder="Tell us what you want to see to improve your experience!" name="message"></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    
+    <div class="mascot">
+        <img src="images/CockyBitesLogo.png" alt="Cocky Bites Logo">
+    </div>
+    <div>
+        <p>&copy; 2025 Share Your Bite. All rights reserved.</p>
+    </div>
+</footer>
+  
+</body>
+</html>

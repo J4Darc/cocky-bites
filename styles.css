@@ -212,7 +212,7 @@ h3 {
 
 /* Index.HTML Page */
 
-insidecv-img {
+.insidecv-img {
     width: 60%
     height: auto;
     display: block;
@@ -279,5 +279,6 @@ footer a:hover {
 }
 
 -----*/
+
 
 

@@ -1,0 +1,165 @@
+/* === Base Styling === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #fff8f0;
+}
+
+/* === Header Section === */
+header {
+  background-color: #800000; /* Deep garnet for school spirit */
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #fff;
+}
+
+/* === Header Layout === */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* === Logo Circle === */
+.logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  margin: 0; 
+}
+
+
+
+/* Style the nav container */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;              /* Wraps buttons on smaller screens */
+  gap: 15px;                    /* Space between buttons */
+  padding: 20px;
+}
+
+/* Style each link as an oval button */
+nav a {
+  background-color: black;      /* Black background */
+  color: white;                 /* White text */
+  text-decoration: none;
+  padding: 10px 25px;           /* Oval shape */
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Garnet hover effect */
+nav a:hover {
+  background-color: #73000a;    /* Garnet (UofSC shade) */
+}
+
+
+
+/* === Circular Feature Buttons === */
+.circle-button {
+  background-color: black;       /* Black circle */
+  color: white;                  /* White text */
+  border: none;
+  border-radius: 50px;           /* Oval shape */
+  padding: 10px 25px;            /* Horizontal padding for oval look */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.circle-button:hover {
+  background-color: #73000a;     /* Garnet (UofSC shade) */
+}
+
+
+
+
+.circle-buttons button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f4a261;
+  border: none;
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.circle-buttons button:hover {
+  background-color: #e76f51;
+}
+
+/* === Tips Section === */
+.tips-section {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tips-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* === Feedback Form === */
+.feedback-form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  background-color: #264653;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* === Footer Section === */
+.cocky-footer {
+  background-color: #800000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+/* === Mascot Image === */
+.mascot img {
+  width: 100px;
+  margin-top: 20px;
+}

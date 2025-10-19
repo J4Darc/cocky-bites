@@ -27,7 +27,7 @@
 
   <section>
     <h2 style="color:#e76f51; margin-top:30px;">Tip Of The Day!</h2>
-    <p style="font-size:1rem; padding:10px;">Order your food before you start your trip so the food is hot and ready when you arrive—no waiting in lines!</p>
+    <p id="random-word" style="font-size:1.2rem; color:#2a9d8f; font-weight:bold;"></p>  
   </section>
 
   <section class="tips-section">
@@ -67,8 +67,35 @@
     <img src="images/CockyBitesLogo.png" alt="CockyBiteLogo">
   </div>
 </footer>
+<script>
+  const words = [
+    "Swipe Smart",
+    "Snack Attack",
+    "Cocky Combo",
+    "Meal Mastery",
+    "Dining Hack",
+    "Panera Prep",
+    "Qdoba Trick",
+    "Cash Crunch",
+    "Freshman Feast",
+    "Campus Cravings"
+  ];
+
+  function updateWord() {
+    const randomIndex = Math.floor(Math.random() * words.length);
+    const word = words[randomIndex];
+    document.getElementById("random-word").innerText = `🍽️ Word of the Moment: ${word}`;
+  }
+
+  // Update every 5 seconds
+  setInterval(updateWord, 5000);
+
+  // Show one immediately on page load
+  updateWord();
+</script>
 </body>
 
 </html>
+
 
 

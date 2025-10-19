@@ -3,31 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Cocky Bites</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="colorstwo.css">
+  
 </head>
 <body>
- <header>
-      <nav class="nav-bar">
-        <a href="index.html" class="logo">
-          <img src="images/CockyBitesLogo.png" alt="Cocky Logo">
-        </a>
-        <div class="nav-buttons">
-          <a href="dininghalls.html" class="nav-button">Dining Halls</a>
-          <a href="restaurantstwo.html" class="nav-button">Testing</a>
-          <a href="resource.html" class="nav-button">Resource Page</a>
-          <a href="yourbite.html" class="nav-button">Share Your Bite</a>
-          <a href="about.html" class="nav-button">About Us</a>
-        </div>
-      </nav>
-    
-      <div class="header-container">
-        <h1>Campus Eats, Cocky Critiques</h1>
-      </div>
-    </header>
+
+  <header>
+    <nav>
+      <a href="dininghalls.html">Dining Hall</a> &nbsp;
+      <a href="restaurants.html">Campus Spots</a> &nbsp;
+      <a href="resource.html">Resource Page</a> &nbsp;
+      <a href="yourbite.html">Share Your Bite</a> &nbsp;
+      <a href="about.html">About Us</a>
+    </nav>
+    <div class="header-container">
+      <img src="images/CockyBitesLogo.png" alt="Campus Logo" class="logo">
+      <h1>Campus Eats, Cocky Critiques</h1>
+    </div>
+  </header>
 
   <section>
     <h2 style="color:#e76f51; margin-top:30px;">Tip Of The Day!</h2>
-    <p id="random-word" style="font-size:1.2rem; color:#2a9d8f; font-weight:bold;"></p>  
+  <p id="random-word" style="font-size:1.2rem; color:#010505; font-weight:bold;"></p>
+      Order your food before you start your trip so the food is hot and ready when you arrive—no waiting in lines!
+    </p>
   </section>
 
   <section class="tips-section">
@@ -36,7 +35,7 @@
       <li><strong>End of the week:</strong> Use your remaining swipes on Wednesday, because they reset on Thursday.</li>
       <li><strong>Maximize a swipe:</strong> Order nachos instead of a bowl from Qdoba so the chips come with your meal, and you don’t have to pay extra for it.</li>
       <li><strong>Free Food:</strong> Utilize periods on campus when free food is offered.</li>
-      <li><strong>Sundays:</strong> Chick-fil-a is closed, so if you want Panera Bread like everyone else, order an hour early!</li>
+      <li><strong>Sundays:</strong> Chick-fil-A is closed, so if you want Panera Bread like everyone else, order an hour early!</li>
       <li><strong>Carolina Cash in the real world:</strong> Tropical Cafe under 650 Lincoln accepts Carolina Cash.</li>
       <li><strong>Fancy Dinner:</strong> Reserve a reservation at Top Of Carolina for a 360 view of Columbia while fine dining! They also accept Carolina Cash.</li>
       <li><strong>Unlimited Food:</strong> Eat as much and as long as you want in any UofSC Dining Hall for 1 meal swipe. There’s unlimited swipes for freshmen!</li>
@@ -44,29 +43,28 @@
   </section>
 
   <footer class="cocky-footer">
-  <div class="social-icons">
-    <a href="#"><img src="images/facebooklogo.png" alt="Facebook"></a>
-    <a href="#"><img src="images/linkedinlogo.png" alt="Linkedin"></a>
-    <a href="#"><img src="images/youtubelogo.jpg" alt="Linkedin"></a>
-    <a href="#"><img src="images/instagramlogo.jpg" alt="Instagram"></a>
-  </div>
-
-  <h2 class="footer-title">Cocky Bites</h2>
-
-  <form class="feedback-form">
-    <div class="input-row">
-      <input type="text" placeholder="First name" name="first-name">
-      <input type="text" placeholder="Last name" name="last-name">
+    <div class="social-icons">
+      <a href="#"><img src="images/facebooklogo.png" alt="Facebook"></a>
+      <a href="#"><img src="images/linkedinlogo.png" alt="linkedin"></a>
+      <a href="#"><img src="images/instagramlogo.jpg" alt="Instagram"></a>
     </div>
-    <input type="email" placeholder="Email address" name="email">
-    <textarea placeholder="Tell us what you want to see to improve your experience!" name="message"></textarea>
-    <button type="submit" class="submit-btn">Submit</button>
-  </form>
 
-  <div class="mascot">
-    <img src="images/CockyBitesLogo.png" alt="CockyBiteLogo">
-  </div>
-</footer>
+    <h2 class="footer-title">Cocky Bites</h2>
+
+    <form class="feedback-form">
+      <div class="input-row">
+        <input type="text" placeholder="First name" name="first-name">
+        <input type="text" placeholder="Last name" name="last-name">
+      </div>
+      <input type="email" placeholder="Email address" name="email">
+      <textarea placeholder="Tell us what you want to see to improve your experience!" name="message"></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <div class="mascot">
+      <img src="mascot-sc.png" alt="SC Mascot holding flag">
+    </div>
+  </footer>
 <script>
   const words = [
     "Swipe Smart",
@@ -94,8 +92,4 @@
   updateWord();
 </script>
 </body>
-
 </html>
-
-
-

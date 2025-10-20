@@ -1,0 +1,289 @@
+/* ========== Global Styles ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+img {
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* ========== Header ========== */
+header {
+  background-color: #800000;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  margin: 0;
+}
+
+/* ========== Navigation Buttons ========== */
+.nav-buttons,
+.nav-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.nav-buttons button,
+.nav-banner button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  background-color: #1b1817;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover,
+.nav-banner button:hover {
+  background-color: #333;
+}
+
+.nav-button {
+  text-decoration: none;
+  background-color: #264653;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #000000;
+}
+
+/* ========== Button Containers ========== */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.oval-button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid #555;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.oval-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* ========== Layout Containers ========== */
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.grid-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.spot-img {
+  width: 100%;
+  max-width: 300px;       /* Optional: limits image width */
+  height: 200px;          /* Fixed height for consistency */
+  object-fit: cover;      /* Ensures image fills space without distortion */
+  border-radius: 8px;     /* Optional: rounded corners for style */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  display: block;
+  margin: 0 auto 10px;    /* Center image and add spacing below */
+
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+  border: 2px dashed #aaa;
+}
+
+/* ========== Text and Description ========== */
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.desc-box {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Ratings ========== */
+.stars {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
+
+/* ========== Section Styling ========== */
+.section {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.starbucks-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* ========== Footer ========== */
+.cocky-footer {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* ========== Feedback Form ========== */
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-row input,
+input[type="email"],
+input,
+textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: center;
+}
+
+/* ========== Mascot ========== */
+.mascot {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.mascot img {
+  width: 80px;
+  height: auto;
+}

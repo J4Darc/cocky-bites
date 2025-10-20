@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <title>My Styled Page</title>
   <link rel="stylesheet" href="colors.css">
-
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-  <nav class="nav-buttons">
-    <a href="index.html">
-      <img src="images/CockyBitesLogo.png" alt="Cocky Logo" class="logo">
-    </a>
-    <a href="dininghalls.html" class="nav-button">Dining Hall</a>
-    <a href="restaurants.html" class="nav-button">Campus Spots</a>
-    <a href="resource.html" class="nav-button">Resource Page</a>
-    <a href="yourbite.html" class="nav-button">Share Your Bite</a>
-    <a href="about.html" class="nav-button">About Us</a>
-  </nav>
-  <div class="header-container">
-    <h1>Campus Eats, Cocky Critiques</h1>
-  </div>
-</header>
+    <nav class="nav-buttons">
+      <a href="index.html">
+        <img src="images/CockyBitesLogo.png" alt="Cocky Logo" class="logo">
+      </a>
+      <a href="dininghalls.html" class="nav-button">Dining Hall</a>
+      <a href="restaurants.html" class="nav-button">Campus Spots</a>
+      <a href="resource.html" class="nav-button">Resource Page</a>
+      <a href="yourbite.html" class="nav-button">Share Your Bite</a>
+      <a href="about.html" class="nav-button">About Us</a>
+    </nav>
+    <div class="header-container">
+      <h1>Campus Eats, Cocky Critiques</h1>
+    </div>
+  </header>
 
+  <!-- Top Spots Grid -->
   <section class="top-spots-grid">
     <div class="grid-container">
       <!-- Chick-fil-A -->
@@ -61,6 +62,7 @@
     </div>
   </section>
 
+  <!-- Restaurant Buttons -->
   <section class="restaurant-buttons">
     <div class="button-container">
       <button class="oval-button">Breakfast Jawn</button>
@@ -70,67 +72,56 @@
     </div>
   </section>
 
-  <body>
-
+  <!-- Starbucks Feature Section -->
+  <section class="starbucks-section">
     <div class="container">
-    <!-- Left Column: Stacked Images -->
-    <div class="column">
-      <img src="images/LibStarbucks.jpg" alt="Main Interior" class="spot-img">
-      <img src="images/StarDrink.jpg" alt="Drink Image 1" class="spot-img">
-    </div>
+      <!-- Left Column: Stacked Images -->
+      <div class="column">
+        <img src="images/LibStarbucks.jpg" alt="Main Interior" class="spot-img">
+        <img src="images/StarDrink.jpg" alt="Drink Image 1" class="spot-img">
+      </div>
 
-    <!-- Right Column: Description -->
-    <div class="column">
-      <div class="description">
-        <h2>T-Coop Starbucks</h2>
-        <p><strong>Location:</strong> T-Coop Main Level</p>
-        <p><strong>Hours:</strong></p>
-        <ul>
-          <li>Monday–Thursday: 7:30 a.m. – 11 p.m.</li>
-          <li>Friday: 7:30 a.m. – 6 p.m.</li>
-          <li>Saturday: 11 a.m. – 4 p.m.</li>
-          <li>Sunday: 11 a.m. – 11 p.m.</li>
-        </ul>
-        <p><strong>Features:</strong> Full Starbucks menu</p>
-        <p><strong>Payment:</strong> Accepts Carolina Cash or Carolina Swipe</p>
-        <p><em>The perfect fuel to push through your library endeavors!</em></p>
+      <!-- Right Column: Description -->
+      <div class="column">
+        <div class="description">
+          <h2>T-Coop Starbucks</h2>
+          <p><strong>Location:</strong> T-Coop Main Level</p>
+          <p><strong>Hours:</strong></p>
+          <ul>
+            <li>Monday–Thursday: 7:30 a.m. – 11 p.m.</li>
+            <li>Friday: 7:30 a.m. – 6 p.m.</li>
+            <li>Saturday: 11 a.m. – 4 p.m.</li>
+            <li>Sunday: 11 a.m. – 11 p.m.</li>
+          </ul>
+          <p><strong>Features:</strong> Full Starbucks menu</p>
+          <p><strong>Payment:</strong> Accepts Carolina Cash or Carolina Swipe</p>
+          <p><em>The perfect fuel to push through your library endeavors!</em></p>
+        </div>
+        <div class="stars">★ ★ ★ ★ ★</div>
       </div>
     </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="cocky-footer">
+    <h2 class="footer-title">Cocky Bites</h2>
 
-      <!-- Red Stars -->
-      <div class="stars">★ ★ ★ ★ ★</div>
-    </div>
-  </div>
+    <form class="feedback-form">
+      <div class="input-row">
+        <input type="text" placeholder="First name" name="first-name">
+        <input type="text" placeholder="Last name" name="last-name">
+      </div>
+      <input type="email" placeholder="Email address" name="email">
+      <textarea placeholder="Tell us what you want to see to improve your experience!" name="message"></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
 
-</body>
-
- <div>
-      <h2 class="footer-title">Cocky Bites</h2>
-    </div>
-
-    <div>
-      <form class="feedback-form">
-        <div class="input-row">
-          <input type="text" placeholder="First name" name="first-name">
-          <input type="text" placeholder="Last name" name="last-name">
-        </div>
-        <input type="email" placeholder="Email address" name="email">
-        <textarea placeholder="Tell us what you want to see to improve your experience!" name="message"></textarea>
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
-    </div>
-    
     <div class="mascot">
-        <img src="images/CockyBitesLogo.png" alt="Cocky Bites">
+      <img src="images/CockyBitesLogo.png" alt="Cocky Bites">
     </div>
-    <div>
-        <p>&copy; 2025 Share Your Bite. All rights reserved.</p>
-    </div>
-    </footer>
-</body>
 
-
+    <p>&copy; 2025 Share Your Bite. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

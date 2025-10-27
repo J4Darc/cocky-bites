@@ -1,0 +1,20 @@
+.social-sharing {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .social-sharing button {
+    background-color: #73000a; /* USC Garnet */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-sharing button:hover {
+    background-color: #cc0000;
+  }

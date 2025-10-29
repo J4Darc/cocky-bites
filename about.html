@@ -6,7 +6,54 @@
     <title>Share Your Bite</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-            #info {
+                /* Make hero image section full width */
+        .hero-images {
+          position: relative;
+          width: 100vw;           /* span the entire viewport width */
+          left: 50%;              /* centers the image */
+          right: 50%;
+          margin-left: -50vw;     /* cancels page padding */
+          margin-right: -50vw;
+          overflow: hidden;
+          z-index: 0;
+        }
+        
+        /* Style the image itself */
+        .hero-images img {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: cover;      /* ensures it fills horizontally */
+          margin: 0;
+          padding: 0;
+        }
+        
+        /* Adjust section layout */
+        #info {
+          position: relative;
+          padding: 0;             /* removes padding around the image */
+          margin: 0;
+          text-align: center;
+        }
+        
+        /* Bring the title over the image */
+        #info h2 {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          color: #ffffff;
+          font-size: 2.5rem;
+          text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+        }
+            
+            
+        
+        
+        
+        
+        /*  #info {
           padding: 2rem;
         }
         .heading-wrapper {
@@ -18,21 +65,23 @@
           left: 0;
           height: 100%;
           z-index: 0;
-          /*opacity: 0.3;    adjust transparency here */
+          /*opacity: 0.3;    adjust transparency here 
           overflow: hidden;
         }
         
-       /* .hero-images img {
+       .hero-images img {
           width: 100%;
           height: auto;
           object-fit: cover;
         }
-        */
+        
         #info h2,
         #info p {
           position: relative;
           z-index: 1;
         }
+            */
+    
 </style>
 </head>
 
@@ -128,6 +177,7 @@
 </body>
 
 </html>
+
 
 
 

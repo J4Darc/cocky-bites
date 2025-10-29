@@ -45,7 +45,7 @@ header {
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;  /*width: auto; height: auto;*/
-    display: flex;
+    display: inline-flex;
       align-items: center;
       justify-content: center;
       color: white;
@@ -353,6 +353,7 @@ footer a:hover {
 }
 
 -----*/
+
 
 
 

@@ -131,7 +131,9 @@ h2 {
 }
 
 h3 {
-  color: #CF9893;
+  color:#000000
+      
+      /*#CF9893;    the light pink color*/  
 }
 
 .cocky-footer {
@@ -273,6 +275,7 @@ footer a:hover {
 }
 
 -----*/
+
 
 
 

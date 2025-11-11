@@ -49,16 +49,13 @@ h3 {color:#000000    /*#CF9893;    the light pink color*/
 header {
     background-color: #89262C;
     color: #FFFFFF;
-    padding: 30px 20px;
+    padding: 0px 20px;
     text-align: center
 }
 
-.header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 10px 20px;
+.header-container { 
+     text-align: center;
+     padding: 10px 20px;
     }
 
 header h1 {
@@ -128,6 +125,8 @@ nav a {
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
+  justify-content: center;
+  align-items: center;
 }
     .nav-buttons button:hover {
      background-color: #AC5F60; /* Hover color */
@@ -140,6 +139,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

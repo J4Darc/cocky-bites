@@ -55,8 +55,12 @@ header {
 }
 
 .header-container { 
-     text-align: center;
-     padding: 10px 20px;
+    display: flex;
+    align-items: enter;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px 20px;
     }
 
 header h1 {
@@ -70,14 +74,21 @@ header h1 {
         /* ======== Navigation ========= */
         /* ====== NAV BAR ====== */
 nav {
-  display: flex;
-  align-items: center;
-  /*justify-content: space-between; logo left, buttons right */
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
-  gap: 15px;
-}
+      display: flex;
+      align-items: center;
+      /*justify-content: space-between; logo left, buttons right */
+      flex-wrap: wrap; /* allow wrapping on smaller screens */
+      gap: 15px;
+    }
 
         /* ====== LOGO ====== */
+.logo-container {
+     flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -87,6 +98,7 @@ nav {
   border-radius: 50%;
   overflow: hidden; /* ensures image fits neatly in the circle */
   margin-right: 20px;
+  margin-top: 20px; 
 }
 
 .logo img {
@@ -96,11 +108,18 @@ nav {
 }
 
         /* ====== NAV BUTTON CONTAINER ====== */
+.nav-bar {
+  flex: 2;
+  display: flex;
+  justify-content: center; /* centers buttons horizontally */
+}
+
 .nav-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  align-items: center;
 }
 
         /* ====== INDIVIDUAL NAV BUTTONS ====== */
@@ -111,7 +130,7 @@ nav {
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
@@ -128,6 +147,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

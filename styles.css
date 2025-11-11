@@ -1,6 +1,8 @@
 /* =========== Total Page =============== */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,6 +20,10 @@ img {
   display: block
 }
 
+html {
+  scroll-behavior: smooth;       /* Smooth scrolling for anchor links */
+  font-size: 16px;               /* Establish a base for rem units */
+}
 
         /*===== Headers =====*/
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +48,7 @@ h3 {color:#000000    /*#CF9893;    the light pink color*/
 
 header {
     background-color: #89262C;
-    /*color: #FFFFFF;*/
+    color: #FFFFFF;
     padding: 30px 20px;
     text-align: center
 }
@@ -58,7 +64,8 @@ header {
 header h1 {
       font-size: 36px;
       color: white;
-      align-items: center 
+      align-items: center;
+      text-align: center
 }
 
 .logo {
@@ -133,6 +140,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

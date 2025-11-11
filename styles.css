@@ -56,18 +56,21 @@ header {
 
 .header-container { 
     display: flex;
-    align-items: enter;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    padding: 10px 20px;
+    /*padding: 10px 20px;*/
     }
+.nav-section {
+  display: flex;
+  flex-direction: column; /* Stack nav and h1 vertically */
+  align-items: center;    /* Center horizontally */
+  text-align: center;     /* Center the h1 text */
+}
 
-header h1 {
-      font-size: 36px;
-      color: white;
-      align-items: center;
-      text-align: center
+.nav-section h1 {
+  margin-top: 10px; /* Add spacing below the buttons */
 }
 
 
@@ -78,7 +81,7 @@ nav {
       align-items: center;
       /*justify-content: space-between; logo left, buttons right */
       flex-wrap: wrap; /* allow wrapping on smaller screens */
-      gap: 15px;
+      gap: 15px; /*potentially remove only if spacing it taken care of somewhere else*/
     }
 
         /* ====== LOGO ====== */
@@ -110,8 +113,6 @@ nav {
         /* ====== NAV BUTTON CONTAINER ====== */
 .nav-bar {
   flex: 2;
-  display: flex;
-  justify-content: center; /* centers buttons horizontally */
 }
 
 .nav-buttons {
@@ -147,6 +148,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

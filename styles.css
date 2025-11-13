@@ -205,6 +205,89 @@ main {
 
 
 
+/* ========== Footer ========== */
+.cocky-footer {
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  /*font-family: 'Segoe UI', sans-serif;*/
+ color: black
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* ========== Feedback Form ========== */
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-row input,
+input[type="email"],
+input, textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid;
+  border-radius: 6px;
+  width: 100%;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: center;
+  background-color: #CF9893;
+  color: #FFFFFF;
+}
+
+.submit-btn:hover {
+  background-color: #AC5F60;
+}
+
+.mascot {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.mascot img {
+  width: 80px;
+  height: auto;
+}
+
+
 
 
 

@@ -1,4 +1,4 @@
-/* =========== Total Page =============== */
+/* =========== Global Styles =============== */
 
 * {
     margin: 0;
@@ -43,6 +43,16 @@ h2 {color: #AC5F60;}
 h3 {color:#000000    /*#CF9893;    the light pink color*/  
 }
 
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+a:hover {
+  color: #005ecc;
+}
 
 /* ====== Website Header ====== */
 
@@ -123,7 +133,7 @@ display: flex;
 
 .nav-buttons {
   white-space: nowrap; /* forces one line */
-  gap: 15px;
+  gap: 25px;
 }
 
         /* ====== INDIVIDUAL NAV BUTTONS ====== */
@@ -153,6 +163,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

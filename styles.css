@@ -59,18 +59,18 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /*text-align: center;
-    padding: 10px 20px;*/
+    /*text-align: center;*/
+    position: relative;
     }
 .nav-section {
   display: flex;
   flex-direction: column; /* Stack nav and h1 vertically */
   align-items: center;    /* Center horizontally */
   text-align: center;     /* Center the h1 text */
-      /* Center the whole section horizontally
+      /* Center the whole section horizontally */
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); */
+  transform: translateX(-50%);
 }
 
 .nav-section h1 {
@@ -125,6 +125,8 @@ nav {
   gap: 15px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px; /* or 15px, whatever spacing you like */
+
 }
 
         /* ====== INDIVIDUAL NAV BUTTONS ====== */
@@ -152,6 +154,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

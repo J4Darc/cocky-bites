@@ -104,13 +104,13 @@ nav {
   border-radius: 50%;
   overflow: hidden; /* ensures image fits neatly in the circle */
   margin-right: 20px;
-  margin-top: 0px; 
+  margin-top: 0px; /* <---- initally 20px */
 }
 
 .logo img {
   width: 100%;
   height: 100%;
-  object-fit: center;
+  object-fit: center; /* <---- initally cover */
 }
 
         /* ====== NAV BUTTON CONTAINER ====== */
@@ -123,6 +123,7 @@ display: flex;
 
 .nav-buttons {
   white-space: nowrap; /* forces one line */
+  gap: 15px;
 }
 
         /* ====== INDIVIDUAL NAV BUTTONS ====== */
@@ -144,12 +145,15 @@ display: flex;
   transform: translateY(-2px);
 }
 
+/* ========================================== */
+
 /*============= Main Overall Colors ============ */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

@@ -104,13 +104,13 @@ nav {
   border-radius: 50%;
   overflow: hidden; /* ensures image fits neatly in the circle */
   margin-right: 20px;
-  margin-top: 20px; 
+  margin-top: 0px; 
 }
 
 .logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: center;
 }
 
         /* ====== NAV BUTTON CONTAINER ====== */
@@ -150,6 +150,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

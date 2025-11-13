@@ -91,10 +91,8 @@ nav {
 
         /* ====== LOGO ====== */
 .logo-container {
-     flex: 1;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+     align-self: flex-start; /* overrides centering for just the logo */
+  margin-left: 20px;      /* keeps your current left offset */;
 }
 
 .logo {
@@ -117,16 +115,14 @@ nav {
 
         /* ====== NAV BUTTON CONTAINER ====== */
 .nav-bar {
-  flex: 2;
+display: flex;
+  justify-content: center;
+  width: 100%; /* ensures the bar spans the header width */
+      padding-bottom: 20px;
 }
 
 .nav-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-
+  white-space: nowrap; /* forces one line */
 }
 
         /* ====== INDIVIDUAL NAV BUTTONS ====== */
@@ -154,6 +150,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

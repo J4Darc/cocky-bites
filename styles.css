@@ -126,7 +126,6 @@ nav {
   gap: 15px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* or 15px, whatever spacing you like */
 
 }
 
@@ -155,6 +154,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
 }
+
 
 
 

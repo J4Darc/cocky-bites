@@ -210,8 +210,8 @@ main {
   padding: 2rem;
   position: relative;
   text-align: center;
-  /*font-family: 'Segoe UI', sans-serif;*/
- color: black
+  color: white;
+  background-color: #89262C;
 }
 
 .footer-title {
@@ -286,6 +286,7 @@ textarea {
   width: 80px;
   height: auto;
 }
+
 
 
 

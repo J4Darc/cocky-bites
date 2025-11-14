@@ -217,6 +217,7 @@ main {
 .footer-title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .social-icons {
@@ -286,6 +287,7 @@ textarea {
   width: 80px;
   height: auto;
 }
+
 
 
 

@@ -1,0 +1,39 @@
+.page-cockybites main img {
+  display: block;
+  margin: 12px auto;
+  height: auto;
+  border-radius: 8px; /* optional */
+}
+
+/* Hero/collage image */
+.page-cockybites .cocky-layout-img {
+  width: 70%;
+  max-width: 900px;
+}
+
+/* Second layout image */
+.page-cockybites .secondlayout-img {
+  width: 70%;
+  max-width: 900px;
+}
+
+/* Inside CV image */
+.page-cockybites .insidecv-img {
+  width: 40%;
+  max-width: 300px;
+}
+
+/* Inside Garnet Station image */
+.page-cockybites .insidegs-img {
+  width: 50%;
+  max-width: 850px;
+  height: auto;
+}
+
+/* Garden Grill, Blenz, Dunkin images */
+.page-cockybites .gardeng-img,
+.page-cockybites .blenz-img,
+.page-cockybites .dd-img {
+  width: 50%;
+  max-width: 700px;
+}

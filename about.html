@@ -20,11 +20,13 @@
         
         /* Style the image itself */
         .hero-images img {
-        width: 100%;
-  		max-height: 30vh;    /* limit the height */
-  		object-fit: contain; /* show full image, no cropping */
-  		background-color: #000; /* optional: fill the empty space behind it */
-  		display: block;
+         width: 100%;
+          /*height: auto; */
+          max-height: 25vh; /*sets the height to 25% of the viewport height*/
+          display: block;
+          object-fit: cover;      /* ensures it fills horizontally */
+          margin: 0 auto;
+          padding: 0; 
         }
         
         /* Adjust section layout */
@@ -177,6 +179,7 @@
 </body>
 
 </html>
+
 
 
 

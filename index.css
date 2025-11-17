@@ -1,23 +1,26 @@
+/* index.css — page-specific styles for Cocky Bites home (index.html) */
+
+/* General images in the main area on this page */
 .page-cockybites main img {
   display: block;
   margin: 12px auto;
   height: auto;
-  border-radius: 8px; /* optional */
+  border-radius: 8px; /* optional rounded corners */
 }
 
-/* Hero/collage image */
+/* Hero / collage image at the top */
 .page-cockybites .cocky-layout-img {
   width: 70%;
   max-width: 900px;
 }
 
-/* Second layout image */
+/* Second layout image in the first card */
 .page-cockybites .secondlayout-img {
   width: 70%;
   max-width: 900px;
 }
 
-/* Inside CV image */
+/* Inside Campus Village Pavilion image */
 .page-cockybites .insidecv-img {
   width: 40%;
   max-width: 300px;
@@ -30,7 +33,7 @@
   height: auto;
 }
 
-/* Garden Grill, Blenz, Dunkin images */
+/* Garden Grill, Blenz, Dunkin' Donuts images */
 .page-cockybites .gardeng-img,
 .page-cockybites .blenz-img,
 .page-cockybites .dd-img {

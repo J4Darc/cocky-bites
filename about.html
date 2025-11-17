@@ -50,6 +50,29 @@
         }
             
 /* ======== Team Section ========== */
+.team-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, max-height 0.3s ease;
+  cursor: pointer;
+  max-height: 280px;   /* default height */
+}
+
+.team-card.expanded {
+  transform: scale(1.03);
+  max-height: 800px;   /* expands to show more */
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-card:hover {
+  transform: scale(1.02);
+}
 
 		/* Container that holds all team members */
 .team-members {
@@ -139,6 +162,20 @@
 
 		
 </style>
+<script>
+document.querySelectorAll('.team-card').forEach(card => {
+  card.addEventListener('click', toggleCard);
+  card.addEventListener('keypress', (e) => {
+    if (e.key === "Enter" || e.key === " ") toggleCard.call(card);
+  });
+});
+
+function toggleCard() {
+  this.classList.toggle('expanded');
+  const expanded = this.classList.contains('expanded');
+  this.setAttribute("aria-expanded", expanded);
+}
+</script>
 </head>
 
 <body>
@@ -248,6 +285,7 @@
 </body>
 
 </html>
+
 
 
 

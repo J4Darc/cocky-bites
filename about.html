@@ -55,7 +55,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;             /* spacing between cards */
-  margin-top: 2rem;
 }
 
 /* Individual team member card */
@@ -67,23 +66,47 @@
   border: 1px solid #e5e5e5;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* optional but polished */
+  text-decoration: none; /* remove link underline */
+  color: inherit;        /* keeps text black */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+
+/* Hover effect */
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  border-color: #ccc;
+}
+
+/* Focus (keyboard accessibility) */
+.team-member:focus {
+  outline: 3px solid #005fcc; /* visible focus ring */
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* Touch devices do not use hover; keep everything smooth */
+@media (hover: none) {
+  .team-member:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+		
 /* Team member images */
 .team-member img {
   width: 120px;
   height: 120px;
   object-fit: cover;
   border-radius: 8px;
-  background: #f0f0f0;   /* subtle gray bg like your mockup */
+  /*background: #f0f0f0;    subtle gray bg like your mockup */
 }
 
-/* Text inside the card */
-.team-member p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #555;
+/* Name + bio stack */
+.team-member .text {
+  display: flex;
+  flex-direction: column;
 }
 
 .team-member .name {
@@ -93,11 +116,27 @@
 }
 
 .team-member .bio {
-  margin-top: .25rem;
-  color: #777;
+  margin-top: .35rem;
+  color: #666;
 }
 
-    
+@media (max-width: 600px) {
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-member img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .team-member .text {
+    align-items: center;
+  }
+}
+
+		
 </style>
 </head>
 
@@ -145,26 +184,37 @@
      </section>
 
     <!-- Meet the Team Section -->
-    <section id="meet-the-team">
-        <h2>Meet the Team!</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="images/vince.png" alt="Photograph of Vincent">
-                 <p class="name">Vincent Alexander</p>
-				<p class="bio">Lorem ipsum …</p>
+   <section id="meet-the-team">
+    <h2>Meet the Team!</h2>
+    <div class="team-members">
+
+        <a href="#" class="team-member">
+            <img src="images/vince.png" alt="Photograph of Alexander Vincent">
+            <div class="text">
+                <p class="name">Alexander Vincent</p>
+                <p class="bio">Bio info goes here...</p>
             </div>
-            <div class="team-member">
-                <img src="images/nardos.jpg" alt="Photograph of Nardos">
+        </a>
+
+        <a href="#" class="team-member">
+            <img src="images/nardos.jpg" alt="Photograph of Nardos Gebreegziabher">
+            <div class="text">
                 <p class="name">Nardos Gebreegziabher</p>
-				<p class="bio">Lorem ipsum …</p>
+                <p class="bio">Bio info goes here...</p>
             </div>
-            <div class="team-member">
-                <img src="images/grace.jpg" alt="Photograph of Grace">
-                 <p class="name">Grace Beasley</p>
-				<p class="bio">Lorem ipsum …</p>
+        </a>
+
+        <a href="#" class="team-member">
+            <img src="images/grace.jpg" alt="Photograph of Grace Beaz">
+            <div class="text">
+                <p class="name">Grace Beaz</p>
+                <p class="bio">Bio info goes here...</p>
             </div>
-        </div>
-    </section>
+        </a>
+
+    </div>
+</section>
+
     
     </main>
 
@@ -197,6 +247,7 @@
 </body>
 
 </html>
+
 
 
 

@@ -50,30 +50,6 @@
         }
             
 /* ======== Team Section ========== */
-.team-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, max-height 0.3s ease;
-  cursor: pointer;
-  max-height: 280px;   /* default height */
-}
-
-.team-card.expanded {
-  transform: scale(1.03);
-  max-height: 800px;   /* expands to show more */
-}
-
-.team-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.team-card:hover {
-  transform: scale(1.02);
-}
-
 		/* Container that holds all team members */
 .team-members {
   display: flex;
@@ -163,18 +139,6 @@
 		
 </style>
 <script>
-document.querySelectorAll('.team-card').forEach(card => {
-  card.addEventListener('click', toggleCard);
-  card.addEventListener('keypress', (e) => {
-    if (e.key === "Enter" || e.key === " ") toggleCard.call(card);
-  });
-});
-
-function toggleCard() {
-  this.classList.toggle('expanded');
-  const expanded = this.classList.contains('expanded');
-  this.setAttribute("aria-expanded", expanded);
-}
 </script>
 </head>
 
@@ -224,38 +188,35 @@ function toggleCard() {
   <!-- Meet the Team Section -->
 <section id="meet-the-team">
     <h2>Meet the Team!</h2>
-
     <div class="team-members">
 
-        <div class="team-card" tabindex="0" role="button" aria-expanded="false" aria-controls="vince-bio">
+        <a href="#" class="team-member">
             <img src="images/vince.png" alt="Photograph of Alexander Vincent">
             <div class="text">
                 <p class="name">Alexander Vincent</p>
-                <p class="bio" id="vince-bio">Bio info goes here...</p>
+                <p class="bio">Bio info goes here...</p>
             </div>
-        </div>
+        </a>
 
-        <div class="team-card" tabindex="0" role="button" aria-expanded="false" aria-controls="nardos-bio">
+        <a href="#" class="team-member">
             <img src="images/nardos.jpg" alt="Photograph of Nardos Gebreegziabher">
             <div class="text">
                 <p class="name">Nardos Gebreegziabher</p>
-                <p class="bio" id="nardos-bio">Bio info goes here...</p>
+                <p class="bio">Bio info goes here...</p>
             </div>
-        </div>
+        </a>
 
-        <div class="team-card" tabindex="0" role="button" aria-expanded="false" aria-controls="grace-bio">
+        <a href="#" class="team-member">
             <img src="images/grace.jpg" alt="Photograph of Grace Beaz">
             <div class="text">
                 <p class="name">Grace Beaz</p>
-                <p class="bio" id="grace-bio">Bio info goes here...</p>
+                <p class="bio">Bio info goes here...</p>
             </div>
-        </div>
+        </a>
 
     </div>
 </section>
 
-
-    
     </main>
 
 	  <footer class="cocky-footer">
@@ -287,6 +248,7 @@ function toggleCard() {
 </body>
 
 </html>
+
 
 
 

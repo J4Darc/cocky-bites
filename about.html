@@ -21,11 +21,12 @@
         /* Style the image itself */
         .hero-images img {
          width: 100%;
-  		 max-height: 25vh;     /* ~half of your current hero height */
-	     object-fit: contain;  /* show the entire image */
-	     display: block;
-	     margin: 0 auto;
-	     background-color: #ffffff; /* match your site background */
+          height: auto; 
+          /*max-height: 25vh; /*sets the height to 25% of the viewport height*/
+          display: block;
+          object-fit: cover;      /* ensures it fills horizontally */
+          margin: 0 auto;
+          padding: 0; 
 	 }
         
         /* Adjust section layout */
@@ -247,6 +248,7 @@
 </body>
 
 </html>
+
 
 
 

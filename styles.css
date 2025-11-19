@@ -1,8 +1,4 @@
 /* =========== Global Styles =============== */
-/* TEST: is styles.css loading on index.html? */
-body {
-  background-color: pink !important;
-}
 
 * {
     margin: 0;
@@ -295,6 +291,7 @@ textarea {
   width: 80px;
   height: auto;
 }
+
 
 
 

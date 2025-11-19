@@ -1,0 +1,49 @@
+/* dininghalls.css — page-specific styling for Dining Halls page */
+
+/* Utensils + logo row under the heading */
+.page-dininghalls .utensils-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;         /* space between images */
+  margin: 16px 0;
+}
+
+.page-dininghalls .utensils-row img {
+  display: block;
+  height: auto;
+}
+
+.page-dininghalls .utensils-row .utensils-img {
+  width: 140px;      /* smaller utensils */
+  max-width: 22vw;   /* responsive cap */
+}
+
+.page-dininghalls .utensils-row .logo-img {
+  width: 88px;       /* smaller logo in the middle */
+  max-width: 12vw;
+}
+
+/* Make dining hall card images consistent */
+.page-dininghalls .hall-card > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsive tweaks for phones */
+@media (max-width: 640px) {
+  .page-dininghalls .utensils-row {
+    gap: 10px;
+    flex-wrap: wrap;   /* if it gets too tight, it can wrap cleanly */
+  }
+
+  .page-dininghalls .utensils-row .utensils-img {
+    width: 28vw;
+  }
+
+  .page-dininghalls .utensils-row .logo-img {
+    width: 18vw;
+  }
+}

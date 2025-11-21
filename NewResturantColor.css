@@ -25,6 +25,7 @@ header {
   text-align: center;
   margin:0;
   padding:0;
+  
 }
 
 header h1 {
@@ -44,7 +45,7 @@ header h1 {
   flex-wrap: wrap;
   margin-top:0;
   padding-top:0;
-  
+  position: relative;
  
 }
 

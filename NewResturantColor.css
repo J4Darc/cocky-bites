@@ -343,15 +343,21 @@ h3 {
   background-color: #AC5F60;
 }
 
-.button-container .oval-button {
+.button-container {
+  display: flex;              /* puts buttons in a row */
+  justify-content: center;    /* centers them horizontally */
+  gap: 20px;                  /* spacing between buttons */
+  flex-wrap: wrap;            /* allows wrapping if screen is narrow */
+  margin: 40px auto;          /* optional: centers container itself with spacing */
+
+.oval-button {
   background-color: #FFFFFF;
   color: #333333;
-  border-color: #555555;
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
+  border: 1px solid #555555;
   border-radius: 50px;
   padding: 10px 25px;
+  cursor: pointer;
+}
 
 .oval-button:hover {
   background-color: #F0F0F0;

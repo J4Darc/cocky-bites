@@ -344,11 +344,14 @@ h3 {
 }
 
 .button-container {
-  display: flex;              /* puts buttons in a row */
-  justify-content: center;    /* centers them horizontally */
+  display: flex;              /* arrange buttons in a row */
+  justify-content: center;    /* center them horizontally */
+  align-items: center;        /* optional: vertically center within section */
   gap: 20px;                  /* spacing between buttons */
   flex-wrap: wrap;            /* allows wrapping if screen is narrow */
-  margin: 40px auto;          /* optional: centers container itself with spacing */
+  width: 100%;                /* make container span full width */
+  margin: 40px auto;          /* centers container block itself */
+}
 
 .oval-button {
   background-color: #FFFFFF;

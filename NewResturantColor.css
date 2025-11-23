@@ -351,6 +351,11 @@ h3 {
   flex-wrap: wrap;            /* allows wrapping if screen is narrow */
   width: 100%;                /* make container span full width */
   margin: 40px auto;          /* centers container block itself */
+  padding: 18px 40px;
+  font-weight: bold; 
+  font-size: 1.2rem;
+  border: 2px solid #555555;   /* slightly thicker border */
+  border-radius: 50px;
 }
 
 .oval-button {

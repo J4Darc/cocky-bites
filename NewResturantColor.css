@@ -17,107 +17,122 @@ img {
   margin-top: 10px;
 }
 
-h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-/* ========== Header ========== */
+h1, h2 {
+    color: #800000;
+    margin-bottom: 20px;
+}
+section { margin-bottom: 60px;}
+
+h1 { color: #89262C;}
+
+h2 {color: #AC5F60;}
+
+h3 {color:#000000    /*#CF9893;    the light pink color*/  }
+
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+a:hover {
+  color: #A89E9E;
+}
+
+/* ====== Website Header ====== */
+/* ====== Website Header ====== */
 header {
-  text-align: center;
-  margin:0;
-  padding:0;
-  
+    background-color: #89262C;
+    color: #FFFFFF;
+    padding: 30px 20px;
+    text-align: center;
+    min-height: 120px;
+    position: relative;
 }
 
-header h1 {
-  font-size: 36px;
-  margin: 0;
-  margin-top:0;
-  padding-top:0;
-  line-height: 1.2;}
-
+/* Position logo left + nav section centered */
+.header-container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.header-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top:0;
-  padding-top:0;
-  position: relative;
- 
+/* Center nav + h1 in middle of header */
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.logo {
-  width: 80px;
-  height: auto;
-  margin: 0;
+.nav-section h1 {
+    margin-top: 15px;
+    color: white;
 }
 
-/* ========== Navigation Buttons ========== */
-.nav-buttons,
-.nav-banner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
+/* ====== Navigation Bar ====== */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.nav-buttons button,
-.nav-banner button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* RESPONSIVE FLEX BUTTON CONTAINER */
+.nav-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;      /* <- allows wrapping but only when needed */
+    justify-content: center;
 }
 
-.nav-buttons button:hover,
-.nav-banner button:hover {
-  transition: background-color 0.3s ease;
-}
-
+/* Buttons */
 .nav-button {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+    background-color: #CF9893;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    white-space: nowrap; /* <- keeps text from breaking weirdly */
 }
 
 .nav-button:hover {
-  transition: background-color 0.3s ease;
+    background-color: #AC5F60;
+    transform: translateY(-2px);
 }
 
-/* ========== Button Containers ========== */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-  width: 100%;
+/* ====== Logo ====== */
+.logo-container {
+    align-self: flex-start;
+    margin-left: 20px;
 }
 
-.oval-button {
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: 2px solid;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.oval-button:hover {
-  transition: background-color 0.3s ease;
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fixes the previously cut-off top */
 }
 
 /* ========== Layout Containers ========== */

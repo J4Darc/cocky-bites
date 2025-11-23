@@ -342,11 +342,15 @@ h3 {
   background-color: #AC5F60;
 }
 
-.oval-button {
+.button-container .oval-button {
   background-color: #FFFFFF;
   color: #333333;
   border-color: #555555;
-}
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 50px;
+  padding: 10px 25px;
 
 .oval-button:hover {
   background-color: #F0F0F0;

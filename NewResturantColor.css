@@ -215,6 +215,18 @@ header {
   height: 100vh;
   text-align: center;
 }
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  color: lightgray;
+  transition: color 0.2s;
+}
+
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
+  color: gold;
+}
 
 /* ========== Footer ========== */
 .cocky-footer {

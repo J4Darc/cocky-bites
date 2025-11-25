@@ -19,23 +19,41 @@
 		    margin-bottom: 20px;
 			}
 		
-			#content h2 {
-		    width: 100%;
-		    margin-bottom: 20px;
+			.profile-wrapper {
+		    display: flex;
+		    align-items: stretch;   /* makes both sections equal height */
+		    gap: 30px;              /* spacing between image and text box */
+		    margin-top: 20px;
 		}
-		
+
 			.profile-image {
-		    width: 250px;
-    		margin-right: 30px;
+		    width: 230px;
+			height: 230px
+    		flex-shrink: 0;
 		}
-		
+
+		.profile-image img {
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;      /* keeps image looking clean without distortion */
+	    border-radius: 10px;
+	}
+
+		.image-label {
+	    text-align: center;
+	    margin-top: 8px;
+	    font-size: 14px;
+	}
 		.profile-display {
+		flex: 1;
 	    background-color: #ffffff;
 	    border: 2px solid #73000a; /* Garnet/maroon border to match the theme */
 	    border-radius: 10px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	    padding: 20px 30px;
-		width: calc(100% - 310px);
+	    padding: 20px 25px;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center; /* vertically centers the fields */
 	}
 
 		.profile-field {
@@ -91,7 +109,9 @@
     <main>
         <section id="content"> 
         <h2>Share Your Bite</h2>
-            
+
+			<div class="profile-wrapper">
+			
             <div class="profile-image">
                 <img src="images/grace.jpg" alt="Profile Image Placeholder" />
                 <p class="image-label">Profile Image</p>
@@ -110,7 +130,8 @@
                     <h3>Favorite Food</h3>
                     <p><strong>Bibimbap</strong></p>
                 </div>
-            </div>                                                                                           
+            </div>       
+		</div>
         </section>
 		 <!--Post Feedback Section-->
 		        
@@ -175,6 +196,7 @@
 </body>
 
 </html>
+
 
 
 

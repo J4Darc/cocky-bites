@@ -219,6 +219,141 @@
 .submit-feedback-btn:hover {
     background-color: #89262C;
 }
+
+/*==== Past Bites Carousel Section ====== */
+.user-info {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.user-info h2 {
+    text-align: center;
+    color: #73000a;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.bites-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.bite {
+    min-width: calc(33.333% - 14px);
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border: 2px solid #73000a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.bite:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bite img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bite-info {
+    padding: 15px;
+}
+
+.bite-info h3 {
+    color: #73000a;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.bite-rating {
+    color: #ffd700;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.bite-info p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    background-color: #73000a;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: #89262C;
+}
+
+.carousel-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #73000a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bite {
+        min-width: calc(100% - 20px);
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
 </style>
 </head>
 
@@ -323,23 +458,54 @@
 </section>
 
 		<!--Past Feedback Section-->
-        <section class="user-info">
-            <h2>Your Past Bites</h2>
+<section class="user-info">
+    <h2>Your Past Bites</h2>
+    <div class="carousel-wrapper">
+        <button class="carousel-btn prev-btn" aria-label="Previous">❮</button>
+        
+        <div class="carousel-container">
             <div class="bites-container">
-                
+                <div class="bite">
                     <img src="images/tcoop.jpg" alt="Bite 1">
-                    <p>Description of the first location review</p>
+                    <div class="bite-info">
+                        <h3>The Coop</h3>
+                        <div class="bite-rating">★★★★☆</div>
+                        <p>Great chicken tenders! The fries were crispy and the service was fast. Definitely coming back.</p>
+                    </div>
                 </div>
                 <div class="bite">
                     <img src="images/halalshack.png" alt="Bite 2">
-                    <p>Description of the second location review</p>
+                    <div class="bite-info">
+                        <h3>Halal Shack</h3>
+                        <div class="bite-rating">★★★★★</div>
+                        <p>Best halal food on campus! The lamb over rice is absolutely delicious. Generous portions too.</p>
+                    </div>
                 </div>
                 <div class="bite">
                     <img src="images/gsseating.png" alt="Bite 3">
-                    <p>Description of the third locaton review</p>
+                    <div class="bite-info">
+                        <h3>Grand Marketplace</h3>
+                        <div class="bite-rating">★★★☆☆</div>
+                        <p>Good variety of options. The salad bar is fresh but can get crowded during lunch rush.</p>
+                    </div>
+                </div>
+                <!-- Add more bites as needed -->
+                <div class="bite">
+                    <img src="images/tcoop.jpg" alt="Bite 4">
+                    <div class="bite-info">
+                        <h3>Russell House Food Court</h3>
+                        <div class="bite-rating">★★★★☆</div>
+                        <p>Love the convenience and variety. Chick-fil-A line is always long but worth it!</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+        
+        <button class="carousel-btn next-btn" aria-label="Next">❯</button>
+    </div>
+    
+    <div class="carousel-dots"></div>
+</section>
         
     </main>
     
@@ -386,10 +552,70 @@
         reviewForm.style.display = 'block';
         tipsForm.style.display = 'none';
     });
+
+
+	  // Carousel functionality
+    const bitesContainer = document.querySelector('.bites-container');
+    const bites = document.querySelectorAll('.bite');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    
+    let currentIndex = 0;
+    const itemsPerView = 3;
+    const totalSlides = Math.ceil(bites.length / itemsPerView);
+    
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    function updateCarousel() {
+        const translateX = -currentIndex * (100 / itemsPerView);
+        bitesContainer.style.transform = `translateX(${translateX}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+        
+        // Update button states
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= totalSlides - 1;
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+    
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+    
+    // Initialize
+    updateCarousel();
 </script>
 </body>
 
 </html>
+
 
 
 

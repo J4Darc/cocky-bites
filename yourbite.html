@@ -80,21 +80,146 @@
 /*==== Feedback Section ====== */
 
 .post-feedback {
-    margin-top: 50px;
+    margin-top: 60px;
     padding-top: 40px;
+    padding-bottom: 40px;
     border-top: 3px solid #89262C;
-	border-bottom: 3px solid #89262C;
+    border-bottom: 3px solid #89262C;
     width: 100%;
 }
-.post-feedback h2,
-.post-feedback form {
+
+.post-feedback h2 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 30px;
 }
-	</style>
+
+.feedback-buttons {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feedback-option-btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #73000a;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #73000a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback-option-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-option-btn.active {
+    background-color: #73000a;
+    color: #ffffff;
+}
+
+.feedback-form-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border: 2px solid #73000a;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #73000a;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #73000a;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.feedback-form-content textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #73000a;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.feedback-form-content label {
+    display: block;
+    font-weight: bold;
+    color: #73000a;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Star Rating Styles */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label.star {
+    font-size: 40px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.star-rating label.star:hover,
+.star-rating label.star:hover ~ label.star,
+.star-rating input[type="radio"]:checked ~ label.star {
+    color: #ffd700;
+}
+
+.submit-feedback-btn {
+    padding: 12px 30px;
+    background-color: #73000a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-feedback-btn:hover {
+    background-color: #89262C;
+}
+</style>
 </head>
 
 <body>
@@ -153,19 +278,49 @@
 		        
 		        <section class="post-feedback">
 		            <h2>Post Your Thoughts</h2>
-		            <form action="#" method="POST">
-		                <!--The goal is for this section to bring up the 
-		                specified form that the user specifies they want.-->>
-		
-		                <label for="review-type">Food Reviews or Tips & Tricks:</label>
-		                <select id="review-type" name="review-type">
-		                    <option value="food-review">Food Reviews</option>
-		                    <option value="tips-tricks">Tips & Tricks</option>
-		                </select>
-		                <textarea id="user-review" name="user-review" rows="5" placeholder="Enter your thoughts here..."></textarea>
-		                <button type="submit">Submit</button>
-		            </form>
-		        </section>
+		            <div class="feedback-buttons">
+        <button type="button" class="feedback-option-btn active" id="tips-btn">Tips & Tricks</button>
+        <button type="button" class="feedback-option-btn" id="review-btn">Food Review</button>
+    </div>
+
+    <!-- Tips & Tricks Form -->
+    <form class="feedback-form-content" id="tips-form" style="display: block;">
+        <label for="tips-content">Share your tips and tricks:</label>
+        <textarea id="tips-content" name="tips-content" rows="8" placeholder="Share your campus dining tips, meal hacks, or money-saving tricks..."></textarea>
+        <button type="submit" class="submit-feedback-btn">Submit Tips</button>
+    </form>
+
+    <!-- Food Review Form -->
+    <form class="feedback-form-content" id="review-form" style="display: none;">
+        <div class="form-group">
+            <label for="location">Dining Location:</label>
+            <input type="text" id="location" name="location" placeholder="e.g., Russell House, Gibbes Court, etc." required>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" class="star">★</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" class="star">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" class="star">★</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" class="star">★</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" class="star">★</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="review-content">Your Review:</label>
+            <textarea id="review-content" name="review-content" rows="8" placeholder="Tell us about your experience, the food quality, service, atmosphere..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-feedback-btn">Submit Review</button>
+    </form>
+</section>
 
 		<!--Past Feedback Section-->
         <section class="user-info">
@@ -209,9 +364,33 @@
     </div>
         <p>&copy; 2025 Share Your Bite. All rights reserved.</p>
     </footer>
+<script>
+    // Get buttons and forms
+    const tipsBtn = document.getElementById('tips-btn');
+    const reviewBtn = document.getElementById('review-btn');
+    const tipsForm = document.getElementById('tips-form');
+    const reviewForm = document.getElementById('review-form');
+
+    // Tips button click
+    tipsBtn.addEventListener('click', function() {
+        tipsBtn.classList.add('active');
+        reviewBtn.classList.remove('active');
+        tipsForm.style.display = 'block';
+        reviewForm.style.display = 'none';
+    });
+
+    // Review button click
+    reviewBtn.addEventListener('click', function() {
+        reviewBtn.classList.add('active');
+        tipsBtn.classList.remove('active');
+        reviewForm.style.display = 'block';
+        tipsForm.style.display = 'none';
+    });
+</script>
 </body>
 
 </html>
+
 
 
 

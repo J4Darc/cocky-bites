@@ -45,5 +45,34 @@
     width: 18vw;
   }
 }
+* Interactive star rating on Dining Halls page */
+
+.page-dininghalls .stars {
+  display: inline-flex;
+  gap: 4px;
+  font-size: 1.3rem;
+  margin: 0.25rem 0;
+}
+
+.page-dininghalls .stars .star {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #ccc;              /* unselected star color */
+  transition: color 0.15s ease;
+}
+
+.page-dininghalls .stars .star.filled {
+  color: #f7b500;           /* selected star color (gold-ish) */
+}
+
+.page-dininghalls .stars .star:hover,
+.page-dininghalls .stars .star:focus {
+  outline: none;
+  color: #ffcf40;           /* brighter on hover */
+}
 
 /* End of Dining Halls */

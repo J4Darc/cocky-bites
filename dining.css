@@ -73,4 +73,30 @@
 .page-dininghalls .stars .star:hover {
   color: #FFEA70;
 }
+.scroll-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 12px;
+  border-radius: 10px;
+  padding-bottom: 8px;
+}
+
+.scroll-gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-gallery::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.scroll-gallery img {
+  height: 220px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  object-fit: cover;
+}
+
 /* End of Dining Halls */

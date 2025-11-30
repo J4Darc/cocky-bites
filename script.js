@@ -58,3 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
     container.setAttribute("aria-label", `${rating} out of 5`);
   }
 });
+
+document.querySelectorAll(".image-scroll-container").forEach(container => {
+    const gallery = container.querySelector(".scroll-gallery");
+    const btnLeft = container.querySelector(".scroll-left");
+    const btnRight = container.querySelector(".scroll-right");
+
+    btnLeft.addEventListener("click", () => {
+        gallery.scrollBy({ left: -250, behavior: "smooth" });
+    });
+
+    btnRight.addEventListener("click", () => {
+        gallery.scrollBy({ left: 250, behavior: "smooth" });
+    });
+});
+

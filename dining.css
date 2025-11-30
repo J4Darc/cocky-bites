@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;         /* space between images */
+  gap: 16px;
   margin: 16px 0;
 }
 
@@ -13,16 +13,16 @@
 }
 
 .page-dininghalls .utensils-row .utensils-img {
-  width: 140px;      /* smaller utensils */
-  max-width: 22vw;   /* responsive cap */
+  width: 140px;
+  max-width: 22vw;
 }
 
 .page-dininghalls .utensils-row .logo-img {
-  width: 88px;       /* smaller logo in the middle */
+  width: 88px;
   max-width: 12vw;
 }
 
-/* Optional: make cards' images consistent on this page */
+/* dining hall image consistency */
 .page-dininghalls .hall-card > img {
   width: 100%;
   height: auto;
@@ -34,19 +34,13 @@
 @media (max-width: 640px) {
   .page-dininghalls .utensils-row {
     gap: 10px;
-    flex-wrap: wrap;   /* if it gets too tight, it can wrap cleanly */
+    flex-wrap: wrap;
   }
-
-  .page-dininghalls .utensils-row .utensils-img {
-    width: 28vw;
-  }
-
-  .page-dininghalls .utensils-row .logo-img {
-    width: 18vw;
-  }
+  .page-dininghalls .utensils-row .utensils-img { width: 28vw; }
+  .page-dininghalls .utensils-row .logo-img { width: 18vw; }
 }
-/* Interactive star rating */
 
+/* Interactive star rating */
 .page-dininghalls .stars {
   display: inline-flex;
   gap: 4px;
@@ -66,13 +60,22 @@
 
 /* selected stars */
 .page-dininghalls .stars .star.filled {
-  color: #FFD700;      /* GOLD */
+  color: #FFD700;
 }
 
 /* hovered stars */
 .page-dininghalls .stars .star:hover {
   color: #FFEA70;
 }
+
+/* IMAGE SCROLLER CONTAINER (NEW) */
+.image-scroll-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* horizontal scroll area inside container */
 .scroll-gallery {
   display: flex;
   overflow-x: auto;
@@ -80,23 +83,37 @@
   gap: 12px;
   border-radius: 10px;
   padding-bottom: 8px;
-}
-
-.scroll-gallery::-webkit-scrollbar {
-  height: 6px;
-}
-
-.scroll-gallery::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
 .scroll-gallery img {
   height: 220px;
   border-radius: 10px;
   flex-shrink: 0;
-  scroll-snap-align: center;
   object-fit: cover;
+  scroll-snap-align: center;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.scroll-gallery img:hover {
+  opacity: 1;
+}
+
+/* SCROLL BUTTONS */
+.scroll-btn {
+  background: #760000;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+.scroll-btn:hover {
+  background: #4e0000;
 }
 
 /* End of Dining Halls */
+

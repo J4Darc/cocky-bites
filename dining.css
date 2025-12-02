@@ -9,8 +9,8 @@
 
 .page-title h2 {
   text-align: center;
+  font-weight: bold; 
 }
-
 .page-dininghalls .utensils-row img {
   display: block;
   height: auto;

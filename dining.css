@@ -93,12 +93,10 @@
   flex-shrink: 0;
   object-fit: cover;
   scroll-snap-align: center;
-  opacity: 0.4;
-  transition: opacity 0.3s ease;
+  opacity: 1 !important;
+  filter: none !important;
 }
-.scroll-gallery img:hover {
-  opacity: 1;
-}
+
 
 /* SCROLL BUTTONS */
 .scroll-btn {

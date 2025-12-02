@@ -66,9 +66,9 @@
   border: 1px solid #e5e5e5;
   border-radius: 12px;
   padding: 1.5rem;
-  text-decoration: none; /* remove link underline */
-  color: inherit;        /* keeps text black */
+  color: inherit;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
 }
 
 
@@ -78,22 +78,7 @@
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
   border-color: #ccc;
 }
-
-/* Focus (keyboard accessibility) */
-.team-member:focus {
-  outline: 3px solid #005fcc; /* visible focus ring */
-  outline-offset: 4px;
-  border-radius: 12px;
-}
-
-/* Touch devices do not use hover; keep everything smooth */
-@media (hover: none) {
-  .team-member:hover {
-    transform: none;
-    box-shadow: none;
-  }
-}
-		
+	
 /* Team member images */
 .team-member img {
   width: 120px;
@@ -107,6 +92,7 @@
 .team-member .text {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .team-member .name {
@@ -115,10 +101,13 @@
   margin: 0;
 }
 
-.team-member .bio {
+.team-member .bio-preview {
   margin-top: .35rem;
   color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
+
 
 @media (max-width: 600px) {
   .team-member {
@@ -135,7 +124,126 @@
     align-items: center;
   }
 }
+/* Modal Overlay (blurred background) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Modal Content Card */
+.modal-content {
+  background: #ffffff;
+  border: 2px solid #73000a;
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(0.7);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #73000a;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #89262C;
+}
+
+/* Modal Image */
+.modal-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border: 3px solid #73000a;
+}
+
+/* Modal Name */
+.modal-content h2 {
+  text-align: center;
+  color: #73000a;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Modal Bio */
+.modal-content p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+  .team-member img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .team-member .text {
+    align-items: center;
+  }
+  
+  .modal-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .modal-content img {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* Focus (keyboard accessibility) */
+.team-member:focus {
+  outline: 3px solid #005fcc; /* visible focus ring */
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* Touch devices do not use hover; keep everything smooth */
+@media (hover: none) {
+  .team-member:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+	
 		
 </style>
 <script>
@@ -190,33 +298,42 @@
     <h2>Meet the Team!</h2>
     <div class="team-members">
 
-        <a href="#" class="team-member">
+        <div class="team-member" onclick="openModal('vincent')">
             <img src="images/vince.png" alt="Photograph of Alexander Vincent">
             <div class="text">
                 <p class="name">Vincent Alexander</p>
-                <p class="bio">Bio info goes here...</p>
+                <p class="bio-preview">Bio info goes here...</p>
             </div>
-        </a>
+        </div>
 
-        <a href="#" class="team-member">
+        <div class="team-member" onclick="openModal('nardos')">
             <img src="images/nardosheadshot.jpg" alt="Photograph of Nardos Gebreegziabher">
             <div class="text">
                 <p class="name">Nardos Gebreegziabher</p>
-                <p class="bio">Nardos is the cofounder and brand designer of Cocky Bites. She’s a junior IT major with a minor in Data Science. Her favorite dining hall is The Community Table at 650 Lincoln, and her go-to campus eatery is Union Grill!</p>
+                <p class="bio-preview">Nardos is the cofounder and brand designer of Cocky Bites. She's a junior IT major...</p>
             </div>
-        </a>
+        </div>
 
-        <a href="#" class="team-member">
+        <div class="team-member" onclick="openModal('grace')">
             <img src="images/D4DE5151-404C-4A6E-B925-C2272ADE7827_1_201_a.jpeg" alt="Photograph of Grace Beaz">
             <div class="text">
                 <p class="name">Grace Beaz</p>
-                <p class="bio">Grace is the director of engagement and development for Cocky Bites. 
-					She’s also an IT major, minoring in Law & Society. Her top dining hall is Gibbes, and her favorite campus eats spot is Golden Spur.</p>
+                <p class="bio-preview">Grace is the director of engagement and development for Cocky Bites...</p>
             </div>
-        </a>
+        </div>
 
     </div>
 </section>
+
+<!-- Modal Overlay -->
+<div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="">
+        <h2 id="modal-name"></h2>
+        <p id="modal-bio"></p>
+    </div>
+</div>
 
     </main>
 
@@ -246,9 +363,55 @@
 	    
 	        <p>&copy; 2025 Cocky Bites. All rights reserved.</p>
 	    </footer>
+<script>
+	// Team member bios data
+const teamData = {
+    vincent: {
+        name: "Vincent Alexander",
+        image: "images/vince.png",
+        bio: "Bio info goes here..."
+    },
+    nardos: {
+        name: "Nardos Gebreegziabher",
+        image: "images/nardosheadshot.jpg",
+        bio: "Nardos is the cofounder and brand designer of Cocky Bites. She's a junior IT major with a minor in Data Science. Her favorite dining hall is The Community Table at 650 Lincoln, and her go-to campus eatery is Union Grill!"
+    },
+    grace: {
+        name: "Grace Beaz",
+        image: "images/D4DE5151-404C-4A6E-B925-C2272ADE7827_1_201_a.jpeg",
+        bio: "Grace is the director of engagement and development for Cocky Bites. She's also an IT major, minoring in Law & Society. Her top dining hall is Gibbes, and her favorite campus eats spot is Golden Spur."
+    }
+};
+
+function openModal(memberId) {
+    const member = teamData[memberId];
+    const modal = document.getElementById('modal-overlay');
+    
+    document.getElementById('modal-image').src = member.image;
+    document.getElementById('modal-name').textContent = member.name;
+    document.getElementById('modal-bio').textContent = member.bio;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal-overlay');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+// Close modal when pressing Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+</script>
 </body>
 
 </html>
+
 
 
 

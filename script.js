@@ -1,23 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    function shareOnFacebook() {
-      const urlToShare = window.location.href;
-      const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
-      window.open(facebookShareUrl, 'Share on Facebook', 'width=600,height=400');
-    }
-  
-    function shareOnTwitter() {
-      const urlToShare = window.location.href;
-      const textToShare = "Check out this post on Cocky Bites!";
-      const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(textToShare)}`;
-      window.open(twitterShareUrl, 'Share on Twitter', 'width=600,height=400');
-    }
-  
-    document.getElementById("share-facebook").addEventListener("click", shareOnFacebook);
-    document.getElementById("share-twitter").addEventListener("click", shareOnTwitter);
-  });
-// Star rating logic for Dining Halls page
-document.addEventListener("DOMContentLoaded", function () {
+  /* ============= SOCIAL SHARE BUTTONS ============= */
+  function shareOnFacebook() {
+    const urlToShare = window.location.href;
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+    window.open(facebookShareUrl, 'Share on Facebook', 'width=600,height=400');
+  }
+
+  function shareOnTwitter() {
+    const urlToShare = window.location.href;
+    const textToShare = "Check out this post on Cocky Bites!";
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(textToShare)}`;
+    window.open(twitterShareUrl, 'Share on Twitter', 'width=600,height=400');
+  }
+
+  const fb = document.getElementById("share-facebook");
+  const tw = document.getElementById("share-twitter");
+  if (fb) fb.addEventListener("click", shareOnFacebook);
+  if (tw) tw.addEventListener("click", shareOnTwitter);
+
+
+  /* ============= STAR RATING ============= */
   const starContainers = document.querySelectorAll(".page-dininghalls .stars");
 
   starContainers.forEach(container => {
@@ -35,14 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
         setRating(container, stars, value);
       });
 
-      // Hover: temporary preview
+      // Hover: preview
       star.addEventListener("mouseenter", () => {
         const value = parseInt(star.getAttribute("data-value"), 10);
         setRating(container, stars, value);
       });
     });
 
-    // When mouse leaves the container, go back to saved rating
+    // Leave: restore saved rating
     container.addEventListener("mouseleave", () => {
       const current = parseInt(container.getAttribute("data-rating") || "0", 10);
       setRating(container, stars, current);
@@ -57,19 +60,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     container.setAttribute("aria-label", `${rating} out of 5`);
   }
-});
-
-document.querySelectorAll(".image-scroll-container").forEach(container => {
+  /* ============= SCROLL BUTTONS ============= */
+  document.querySelectorAll(".image-scroll-container").forEach(container => {
     const gallery = container.querySelector(".scroll-gallery");
     const btnLeft = container.querySelector(".scroll-left");
     const btnRight = container.querySelector(".scroll-right");
 
     btnLeft.addEventListener("click", () => {
-        gallery.scrollBy({ left: -250, behavior: "smooth" });
+      gallery.scrollBy({ left: -250, behavior: "smooth" });
     });
 
     btnRight.addEventListener("click", () => {
-        gallery.scrollBy({ left: 250, behavior: "smooth" });
+      gallery.scrollBy({ left: 250, behavior: "smooth" });
     });
-});
+  });
+  /* ============= IMAGE MODAL ENLARGE ============= */
+  document.querySelectorAll(".scroll-gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      const modal = document.getElementById("img-modal");
+      const modalImg = document.getElementById("img-modal-content");
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+  document.querySelector(".close-modal").addEventListener("click", () => {
+    document.getElementById("img-modal").style.display = "none";
+  });
 
+  document.getElementById("img-modal").addEventListener("click", (e) => {
+    if (e.target.id === "img-modal") {
+      document.getElementById("img-modal").style.display = "none";
+    }
+  });
+
+});

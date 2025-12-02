@@ -22,13 +22,15 @@
   max-width: 12vw;
 }
 
-/* dining hall image consistency */
+
+/* dining hall image consistency  */
 .page-dininghalls .hall-card > img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 8px;
 }
+
 
 /* Responsive tweak for phones */
 @media (max-width: 640px) {
@@ -39,6 +41,7 @@
   .page-dininghalls .utensils-row .utensils-img { width: 28vw; }
   .page-dininghalls .utensils-row .logo-img { width: 18vw; }
 }
+
 
 /* Interactive star rating */
 .page-dininghalls .stars {
@@ -58,24 +61,29 @@
   transition: color 0.2s ease;
 }
 
+
 /* selected stars */
 .page-dininghalls .stars .star.filled {
   color: #FFD700;
 }
+
 
 /* hovered stars */
 .page-dininghalls .stars .star:hover {
   color: #FFEA70;
 }
 
-/* IMAGE SCROLLER CONTAINER (NEW) */
+
+/* IMAGE SCROLLER CONTAINER */
 .image-scroll-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 
-/* horizontal scroll area inside container */
+
+/* horizontal scroll */
 .scroll-gallery {
   display: flex;
   overflow-x: auto;
@@ -93,8 +101,15 @@
   flex-shrink: 0;
   object-fit: cover;
   scroll-snap-align: center;
-  opacity: 1 !important;
+  opacity: 1 !important;    /* ALWAYS SOLID */
   filter: none !important;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+/* Optional hover enlarge */
+.scroll-gallery img:hover {
+  transform: scale(1.06);
 }
 
 
@@ -107,42 +122,4 @@
   padding: 10px 14px;
   cursor: pointer;
   border-radius: 8px;
-  transition: background 0.2s ease;
-}
-.scroll-btn:hover {
-  background: #4e0000;
-}
-.img-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 70px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.85);
-}
-
-.img-modal img {
-  display: block;
-  margin: auto;
-  max-width: 88%;
-  max-height: 88%;
-  border-radius: 10px;
-}
-
-.close-modal {
-  position: absolute;
-  top: 25px;
-  right: 40px;
-  color: white;
-  font-size: 45px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-
-/* End of Dining Halls */
-
+  transition: backgr

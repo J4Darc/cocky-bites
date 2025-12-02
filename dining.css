@@ -112,6 +112,37 @@
 .scroll-btn:hover {
   background: #4e0000;
 }
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.img-modal img {
+  display: block;
+  margin: auto;
+  max-width: 88%;
+  max-height: 88%;
+  border-radius: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
 /* End of Dining Halls */
 

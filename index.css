@@ -38,6 +38,19 @@
 
 }
 /*──────────────────*/
+.update-item {
+  width: 100%;
+  max-width: 730px;
+}
+
+.updates-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 5px;
+}
+
 .update-card {
   background: #760000;
   color: white;

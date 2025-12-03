@@ -73,14 +73,17 @@
 
 /* IMAGE SIZE — restored to normal thumbnail scrolling */
 .scroll-gallery img {
-  height: 200px;      /* adjusts image size */
+  height: auto;
   width: auto;
+  max-height: 180px;       /* prevents huge photos */
+  max-width: 260px;        /* preserves original thumbnail size */
   flex: 0 0 auto;
-  object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
+  object-fit: cover;
   transition: transform 0.25s ease;
 }
+
 
 /* hover grow */
 .scroll-gallery img:hover {

@@ -98,3 +98,43 @@
   gap: 12px;
   margin-top: 18px;
 }
+.latest-updates {
+  text-align: center;
+}
+
+.update-item {
+  width: 100%;
+  max-width: 720px;
+}
+
+.update-card {
+  background: #760000;
+  color: white;
+  padding: 14px 20px;
+  text-align: left;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.update-card:hover {
+  background: #5b0000;
+  transform: scale(1.01);
+}
+
+.update-content {
+  display: none;
+  background: #f7f7f7;
+  color: #333;
+  font-size: 0.95rem;
+  padding: 12px 16px;
+  border-left: 3px solid #760000;
+  border-radius: 0 0 8px 8px;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+

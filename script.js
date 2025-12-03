@@ -94,3 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+  /* For INDEX*/
+document.querySelectorAll(".update-item").forEach(item => {
+  const btn = item.querySelector(".update-card");
+  const content = item.querySelector(".update-content");
+
+  btn.addEventListener("click", () => {
+    const isOpen = content.style.display === "block";
+    document.querySelectorAll(".update-content").forEach(c => c.style.display = "none");
+    content.style.display = isOpen ? "none" : "block";
+  });
+});
+

@@ -45,95 +45,6 @@ a:hover {
   color: #A89E9E;
 }
 
-/* ====== Website Header ====== */
-/* ====== Website Header ====== */
-header {
-    background-color: #89262C;
-    color: #FFFFFF;
-    padding: 30px 20px;
-    text-align: center;
-    min-height: 120px;
-    position: relative;
-}
-
-/* Position logo left + nav section centered */
-.header-container { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-/* Center nav + h1 in middle of header */
-.nav-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.nav-section h1 {
-    margin-top: 15px;
-    color: white;
-}
-
-/* ====== Navigation Bar ====== */
-.nav-bar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* RESPONSIVE FLEX BUTTON CONTAINER */
-.nav-buttons {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;      /* <- allows wrapping but only when needed */
-    justify-content: center;
-}
-
-/* Buttons */
-.nav-button {
-    background-color: #CF9893;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 1.3rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease;
-    white-space: nowrap; /* <- keeps text from breaking weirdly */
-}
-
-.nav-button:hover {
-    background-color: #AC5F60;
-    transform: translateY(-2px);
-}
-
-/* ====== Logo ====== */
-.logo-container {
-    align-self: flex-start;
-    margin-left: 20px;
-}
-
-.logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* fixes the previously cut-off top */
-}
 
 /* ========== Layout Containers ========== */
 .container {
@@ -336,25 +247,6 @@ h3 {
   color: #CF9893;
 }
 
-.nav-buttons button,
-.nav-banner button {
-  background-color: #1b1817;
-  color: #FFFFFF;
-}
-
-.nav-buttons button:hover,
-.nav-banner button:hover {
-  background-color: #AC5F60;
-}
-
-.nav-button {
-  background-color: #CF9893;
-  color: #FFFFFF;
-}
-
-.nav-button:hover {
-  background-color: #AC5F60;
-}
 
 .button-container {
   display: flex;              /* arrange buttons in a row */

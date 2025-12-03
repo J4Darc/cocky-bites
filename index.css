@@ -72,3 +72,13 @@
 .updates-icons {
   display: flex;
   flex-direction:
+
+    .latest-updates-title {
+  text-align: center;
+  font-size: 3rem;       /* BIGGER than before */
+  font-weight: 900;
+  margin-top: 55px;
+  margin-bottom: 12px;
+  color: #000;
+  letter-spacing: 0.5px;
+}

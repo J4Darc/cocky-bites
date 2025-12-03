@@ -1,5 +1,6 @@
 /* Dining Halls */
 
+/* PAGE TITLE */
 .page-title h2 {
   text-align: center;
   font-weight: 800;
@@ -7,7 +8,7 @@
   margin-bottom: 10px;
 }
 
-/* rename utensils-row -> cocky-center */
+/* Cocky logo centered */
 .page-dininghalls .cocky-center {
   display: flex;
   justify-content: center;
@@ -21,26 +22,7 @@
 }
 
 
-/* dining hall image consistency */
-.page-dininghalls .hall-card > img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-
-/* Responsive tweak */
-@media (max-width: 640px) {
-  .page-dininghalls .cocky-center img {
-    width: 34vw;
-  }
-
-  .page-title h2 {
-    font-size: 2rem;
-  }
-}
-
-
-/* Interactive star rating */
+/* STAR RATING */
 .page-dininghalls .stars {
   display: inline-flex;
   gap: 4px;
@@ -66,7 +48,7 @@
 }
 
 
-/* IMAGE SCROLLER CONTAINER */
+/* SCROLLER CONTAINER */
 .image-scroll-container {
   display: flex;
   align-items: center;
@@ -75,33 +57,32 @@
 }
 
 
-/* HIDE SCROLLBAR */
+/* SCROLLER — multiple images visible */
 .scroll-gallery {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  gap: 12px;
 }
 
 .scroll-gallery::-webkit-scrollbar {
   display: none;
 }
 
-
-/* SHOW ONE IMAGE AT A TIME */
+/* IMAGE SIZE — restored to normal thumbnail scrolling */
 .scroll-gallery img {
-  width: 100%;
-  height: 220px;
-  flex: 0 0 100%;
-  scroll-snap-align: center;
+  height: 200px;      /* adjusts image size */
+  width: auto;
+  flex: 0 0 auto;
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.25s ease;
 }
 
+/* hover grow */
 .scroll-gallery img:hover {
   transform: scale(1.05);
 }
@@ -124,7 +105,7 @@
 }
 
 
-/* IMAGE POPUP VIEWER */
+/* IMAGE MODAL */
 .img-modal {
   display: none;
   position: fixed;
@@ -154,3 +135,20 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .page-dininghalls .cocky-center img {
+    width: 34vw;
+  }
+
+  .page-title h2 {
+    font-size: 2rem;
+  }
+
+  .scroll-gallery img {
+    height: 180px;
+  }
+}
+

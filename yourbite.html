@@ -158,7 +158,34 @@
     font-size: 14px;
     background-color: #f9f9f9;
 }
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #73000a;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-family: inherit;
+}
 
+.form-group select:focus {
+    outline: 2px solid #73000a;
+    outline-offset: 2px;
+}
+
+/* Style for the optgroup labels */
+.form-group select optgroup {
+    font-weight: bold;
+    font-style: normal;
+    color: #73000a;
+}
+
+.form-group select option {
+    padding: 8px;
+    color: #333;
+}
+		
 .feedback-form-content textarea {
     width: 100%;
     padding: 12px 15px;
@@ -425,36 +452,78 @@
         <button type="submit" class="submit-feedback-btn">Submit Tips</button>
     </form>
 
-    <!-- Food Review Form -->
-    <form class="feedback-form-content" id="review-form" style="display: none;">
-        <div class="form-group">
-            <label for="location">Dining Location:</label>
-            <input type="text" id="location" name="location" placeholder="e.g., Russell House, Gibbes Court, etc." required>
-        </div>
+   <!-- Food Review Form -->
+<form class="feedback-form-content" id="review-form" style="display: none;">
+    <div class="form-group">
+        <label for="location">Dining Location:</label>
+        <select id="location" name="location" required>
+            <option value="">-- Select a location --</option>
+            
+            <optgroup label="Dining Halls">
+                <option value="Fresh Greene's">Fresh Greene's</option>
+                <option value="Garnet Stations">Garnet Stations</option>
+                <option value="Gibbes Court Bistro">Gibbes Court Bistro</option>
+                <option value="Honeycomb Cafe">Honeycomb Cafe</option>
+                <option value="The Community Table">The Community Table</option>
+                <option value="The Pavillion">The Pavillion</option>
+            </optgroup>
+            
+            <optgroup label="Campus Restaurants">
+                <option value="Chick-fil-A">Chick-fil-A</option>
+                <option value="Gadsen Chick-fil-A">Gadsen Chick-fil-A</option>
+                <option value="Panda Express">Panda Express</option>
+                <option value="Panera Bread">Panera Bread</option>
+                <option value="Qdoba">Qdoba</option>
+                <option value="Halal Shack">Halal Shack</option>
+                <option value="Blenz">Blenz</option>
+                <option value="Cicci di Carne">Cicci di Carne</option>
+                <option value="Congaree Craft Pizza">Congaree Craft Pizza</option>
+                <option value="Einstein Bros. Bagels">Einstein Bros. Bagels</option>
+                <option value="Gamecock Griddle">Gamecock Griddle</option>
+                <option value="Steak It Easy">Steak It Easy</option>
+                <option value="Stonie's Bowls">Stonie's Bowls</option>
+                <option value="Union Grill">Union Grill</option>
+                <option value="The Spur">The Spur</option>
+                <option value="Starbucks at CV">Starbucks at CV</option>
+                <option value="Starbucks at Tcoop">Starbucks at Tcoop</option>
+                <option value="Starbucks at Welsh Humanities">Starbucks at Welsh Humanities</option>
+                <option value="Colloquium Cafe">Colloquium Cafe</option>
+                <option value="Horseshoe Deli">Horseshoe Deli</option>
+                <option value="Village Juice and Kitchen">Village Juice and Kitchen</option>
+                <option value="Dunkin Donuts">Dunkin Donuts</option>
+                <option value="Global Cafe">Global Cafe</option>
+                <option value="The Buzz">The Buzz</option>
+                <option value="Cafe Verde">Cafe Verde</option>
+                <option value="The Wired Cafe">The Wired Cafe</option>
+                <option value="Counselors Cafe">Counselors Cafe</option>
+                <option value="Hampton St. Cafe">Hampton St. Cafe</option>
+            </optgroup>
+        </select>
+    </div>
 
-        <div class="form-group">
-            <label for="rating">Rating:</label>
-            <div class="star-rating">
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5" class="star">★</label>
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4" class="star">★</label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3" class="star">★</label>
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2" class="star">★</label>
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1" class="star">★</label>
-            </div>
+    <div class="form-group">
+        <label for="rating">Rating:</label>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" class="star">★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" class="star">★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" class="star">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" class="star">★</label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" class="star">★</label>
         </div>
+    </div>
 
-        <div class="form-group">
-            <label for="review-content">Your Review:</label>
-            <textarea id="review-content" name="review-content" rows="8" placeholder="Tell us about your experience, the food quality, service, atmosphere..."></textarea>
-        </div>
+    <div class="form-group">
+        <label for="review-content">Your Review:</label>
+        <textarea id="review-content" name="review-content" rows="8" placeholder="Tell us about your experience, the food quality, service, atmosphere..."></textarea>
+    </div>
 
-        <button type="submit" class="submit-feedback-btn">Submit Review</button>
-    </form>
+    <button type="submit" class="submit-feedback-btn">Submit Review</button>
+</form>
 </section>
 
 		<!--Past Feedback Section-->
@@ -621,6 +690,7 @@
 </body>
 
 </html>
+
 
 
 

@@ -1,6 +1,5 @@
-/*──────────────────────────*/
 /* INDEX PAGE — Cocky Bites */
-/*──────────────────────────*/
+
 
 /* Home Intro SECTION */
 .home-intro {
@@ -136,4 +135,15 @@
   .latest-updates h3 {
     font-size: 2rem;
   }
+}
+.home-title {
+  color: #4E0000 !important;
+}
+
+.latest-updates h3 {
+  color: #000000 !important;
+}
+
+.tap-hint {
+  text-align: center !important;
 }

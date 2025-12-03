@@ -1,49 +1,42 @@
-/* Dining Halls HTML */
-.page-dininghalls .utensils-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin: 16px 0;
-}
+/* Dining Halls */
 
 .page-title h2 {
   text-align: center;
-  font-weight: bold; 
-}
-.page-dininghalls .utensils-row img {
-  display: block;
-  height: auto;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.page-dininghalls .utensils-row .utensils-img {
-  width: 140px;
-  max-width: 22vw;
+/* rename utensils-row -> cocky-center */
+.page-dininghalls .cocky-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
 }
 
-.page-dininghalls .utensils-row .logo-img {
-  width: 88px;
-  max-width: 12vw;
+.page-dininghalls .cocky-center img {
+  width: 200px;
+  max-width: 28vw;
 }
 
 
-/* dining hall image consistency  */
+/* dining hall image consistency */
 .page-dininghalls .hall-card > img {
   width: 100%;
-  height: auto;
-  display: block;
   border-radius: 8px;
 }
 
 
-/* Responsive tweak for phones */
+/* Responsive tweak */
 @media (max-width: 640px) {
-  .page-dininghalls .utensils-row {
-    gap: 10px;
-    flex-wrap: wrap;
+  .page-dininghalls .cocky-center img {
+    width: 34vw;
   }
-  .page-dininghalls .utensils-row .utensils-img { width: 28vw; }
-  .page-dininghalls .utensils-row .logo-img { width: 18vw; }
+
+  .page-title h2 {
+    font-size: 2rem;
+  }
 }
 
 
@@ -58,21 +51,16 @@
 .page-dininghalls .stars .star {
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
   font-size: 1.7rem;
   color: #cccccc;
   transition: color 0.2s ease;
 }
 
-
-/* selected stars */
 .page-dininghalls .stars .star.filled {
   color: #FFD700;
 }
 
-
-/* hovered stars */
 .page-dininghalls .stars .star:hover {
   color: #FFEA70;
 }
@@ -87,33 +75,35 @@
 }
 
 
-/* horizontal scroll */
+/* HIDE SCROLLBAR */
 .scroll-gallery {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 12px;
-  border-radius: 10px;
-  padding-bottom: 8px;
   scroll-behavior: smooth;
-  width: 100%;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+.scroll-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* SHOW ONE IMAGE AT A TIME */
 .scroll-gallery img {
+  width: 100%;
   height: 220px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  object-fit: cover;
+  flex: 0 0 100%;
   scroll-snap-align: center;
-  opacity: 1 !important;    /* ALWAYS SOLID */
-  filter: none !important;
+  object-fit: cover;
+  border-radius: 10px;
   cursor: pointer;
   transition: transform 0.25s ease;
 }
 
-/* Optional hover enlarge */
 .scroll-gallery img:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 
@@ -126,27 +116,41 @@
   padding: 10px 14px;
   cursor: pointer;
   border-radius: 8px;
-  transition: backgr
-  .no-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;     
+  transition: background 0.2s ease;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none; 
+.scroll-btn:hover {
+  background: #4e0000;
 }
 
-/* force gallery to show only one image at a time */
-.scroll-gallery {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+
+/* IMAGE POPUP VIEWER */
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 70px;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
 }
 
-/* each image takes full width */
-.scroll-gallery img {
-  width: 100%;
-  flex: 0 0 100%;
-  scroll-snap-align: center;
+.img-modal img {
+  display: block;
+  margin: auto;
+  max-width: 88%;
+  max-height: 88%;
+  border-radius: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
 }

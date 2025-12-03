@@ -105,47 +105,6 @@
           <button class="star" type="button" data-value="4">★</button>
           <button class="star" type="button" data-value="5">★</button>
         </div>
-        <script>
-          // ============= STAR RATINGS =============
-          const starContainers = document.querySelectorAll(".stars");
-      
-          starContainers.forEach(container => {
-            const stars = Array.from(container.querySelectorAll(".star"));
-      
-            // Set initial rating based on data-rating
-            const initialRating = parseInt(container.getAttribute("data-rating") || "0", 10);
-            setRating(container, stars, initialRating);
-      
-            stars.forEach(star => {
-              // Click: lock in a rating
-              star.addEventListener("click", () => {
-                const value = parseInt(star.getAttribute("data-value"), 10);
-                container.setAttribute("data-rating", value);
-                setRating(container, stars, value);
-              });
-      
-              // Hover: preview
-              star.addEventListener("mouseenter", () => {
-                const value = parseInt(star.getAttribute("data-value"), 10);
-                setRating(container, stars, value);
-              });
-            });
-      
-            // Leave: restore saved rating
-            container.addEventListener("mouseleave", () => {
-              const current = parseInt(container.getAttribute("data-rating") || "0", 10);
-              setRating(container, stars, current);
-            });
-          });
-      
-          function setRating(container, stars, rating) {
-            stars.forEach(star => {
-              const value = parseInt(star.getAttribute("data-value"), 10);
-              star.classList.toggle("filled", value <= rating);
-            });
-            container.setAttribute("aria-label", `${rating} out of 5`);
-          }
-      </script>
       </div>
     </div>
   </section>
@@ -170,9 +129,46 @@
 
     <p>&copy; 2025 Share Your Bite. All rights reserved.</p>
   </footer>
+<script>
+    // ============= STAR RATINGS =============
+    const starContainers = document.querySelectorAll(".stars");
 
+    starContainers.forEach(container => {
+      const stars = Array.from(container.querySelectorAll(".star"));
+
+      const initialRating = parseInt(container.getAttribute("data-rating") || "0", 10);
+      setRating(container, stars, initialRating);
+
+      stars.forEach(star => {
+        star.addEventListener("click", () => {
+          const value = parseInt(star.getAttribute("data-value"), 10);
+          container.setAttribute("data-rating", value);
+          setRating(container, stars, value);
+        });
+
+        star.addEventListener("mouseenter", () => {
+          const value = parseInt(star.getAttribute("data-value"), 10);
+          setRating(container, stars, value);
+        });
+      });
+
+      container.addEventListener("mouseleave", () => {
+        const current = parseInt(container.getAttribute("data-rating") || "0", 10);
+        setRating(container, stars, current);
+      });
+    });
+
+    function setRating(container, stars, rating) {
+      stars.forEach(star => {
+        const value = parseInt(star.getAttribute("data-value"), 10);
+        star.classList.toggle("filled", value <= rating);
+      });
+      container.setAttribute("aria-label", `${rating} out of 5`);
+    }
+</script>
 </body>
 </html>
+
 
 
 

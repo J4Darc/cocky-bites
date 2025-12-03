@@ -121,6 +121,14 @@
   .update-card {
     font-size: 1.05rem;
   }
+  .tap-hint {
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 8px;
+}
+
 
   .latest-updates h3 {
     font-size: 2rem;

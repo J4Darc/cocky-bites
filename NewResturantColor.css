@@ -160,6 +160,12 @@ header {
   max-width: 300px;
   text-align: center;
 }
+.grid-item: hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* shadow pops */
+  transform: scale(1.05);      /* slight zoom */
+}
+
+
 
 .spot-img {
   width: 100%;

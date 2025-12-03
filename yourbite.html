@@ -255,10 +255,8 @@
 }
 
 .user-info h2 {
-    text-align: center;
-    color: #73000a;
+    text-align: left;
     margin-bottom: 30px;
-    font-size: 28px;
 }
 
 .carousel-wrapper {
@@ -628,68 +626,137 @@
         tipsForm.style.display = 'none';
     });
 
-
-	  // Carousel functionality
-    const bitesContainer = document.querySelector('.bites-container');
-    const bites = document.querySelectorAll('.bite');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const dotsContainer = document.querySelector('.carousel-dots');
-    
-    let currentIndex = 0;
-    const itemsPerView = 3;
-    const totalSlides = Math.ceil(bites.length / itemsPerView);
-    
-    // Create dots
-    for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (i === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-    }
-    
-    const dots = document.querySelectorAll('.dot');
-    
-    function updateCarousel() {
-        const translateX = -currentIndex * (100 / itemsPerView);
-        bitesContainer.style.transform = `translateX(${translateX}%)`;
+    // Handle Food Review Form Submission
+    reviewForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent page reload
         
-        // Update dots
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
+        // Get form values
+        const location = document.getElementById('location').value;
+        const ratingInputs = document.querySelectorAll('input[name="rating"]');
+        let ratingValue = 0;
+        
+        ratingInputs.forEach(input => {
+            if (input.checked) {
+                ratingValue = parseInt(input.value);
+            }
         });
         
-        // Update button states
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= totalSlides - 1;
-    }
+        const reviewContent = document.getElementById('review-content').value;
+        
+        // Create star display
+        let starDisplay = '';
+        for (let i = 1; i <= 5; i++) {
+            starDisplay += i <= ratingValue ? '★' : '☆';
+        }
+        
+        // Create new bite card
+        const newBite = document.createElement('div');
+        newBite.classList.add('bite');
+        newBite.innerHTML = `
+            <img src="images/placeholder-food.jpg" alt="${location}">
+            <div class="bite-info">
+                <h3>${location}</h3>
+                <div class="bite-rating">${starDisplay}</div>
+                <p>${reviewContent}</p>
+            </div>
+        `;
+        
+        // Add to beginning of carousel
+        const bitesContainer = document.querySelector('.bites-container');
+        bitesContainer.insertBefore(newBite, bitesContainer.firstChild);
+        
+        // Reset form
+        reviewForm.reset();
+        
+        // Show success message
+        alert('Review submitted successfully!');
+        
+        // Reinitialize carousel
+        initCarousel();
+    });
+
+    // Carousel functionality
+    let currentIndex = 0;
+    let itemsPerView = 3;
+    let totalSlides = 0;
+    let dots = [];
     
-    function goToSlide(index) {
-        currentIndex = index;
+    function initCarousel() {
+        const bitesContainer = document.querySelector('.bites-container');
+        const bites = document.querySelectorAll('.bite');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        
+        // Reset carousel
+        currentIndex = 0;
+        totalSlides = Math.ceil(bites.length / itemsPerView);
+        
+        // Clear existing dots
+        dotsContainer.innerHTML = '';
+        
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+        
+        dots = document.querySelectorAll('.dot');
+        
+        function updateCarousel() {
+            const translateX = -currentIndex * (100 / itemsPerView);
+            bitesContainer.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            
+            // Update button states
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= totalSlides - 1;
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+        
+        // Remove old event listeners by cloning buttons
+        const newPrevBtn = prevBtn.cloneNode(true);
+        const newNextBtn = nextBtn.cloneNode(true);
+        prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+        nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+        
+        // Add new event listeners
+        newPrevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+        
+        newNextBtn.addEventListener('click', () => {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+        
+        // Initialize
         updateCarousel();
     }
     
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    });
-    
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-            updateCarousel();
-        }
-    });
-    
-    // Initialize
-    updateCarousel();
+    // Initialize carousel on page load
+    initCarousel()
 </script>
 </body>
 
 </html>
+
 
 
 

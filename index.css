@@ -1,4 +1,34 @@
 /* index.css — page-specific styles for Cocky Bites home (index.html) */
+/* HERO SECTION */
+.home-intro {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Bigger title */
+.home-title {
+  font-size: 3rem;           /* was too small — now BIG */
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text */
+.home-text {
+  font-size: 1.35rem;        /* slightly bigger */
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  font-weight: 400;
+}
+
+/* Full-width image layout after hero */
+.section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 14px;
+}
 
 /* General images in the main area on this page */
 .page-cockybites main img {

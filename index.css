@@ -13,8 +13,10 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 15px;
-  color: #AC5F60 !important;
   font-family: inherit;
+}
+#bite-title {
+  color: #AC5F60 !important;
 }
 
 /* Home intro paragraph text */

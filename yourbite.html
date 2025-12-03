@@ -680,14 +680,20 @@
     let itemsPerView = 3;
     let totalSlides = 0;
     let dots = [];
-    
+    let autoRotateInterval = null; // Store the interval ID
+	
     function initCarousel() {
         const bitesContainer = document.querySelector('.bites-container');
         const bites = document.querySelectorAll('.bite');
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
         const dotsContainer = document.querySelector('.carousel-dots');
-        
+
+ 		// Clear any existing interval
+        if (autoRotateInterval) {
+            clearInterval(autoRotateInterval);
+        }
+		
         // Reset carousel
         currentIndex = 0;
         totalSlides = Math.ceil(bites.length / itemsPerView);
@@ -700,7 +706,10 @@
             const dot = document.createElement('div');
             dot.classList.add('dot');
             if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
+            dot.addEventListener('click', () => {
+                goToSlide(i);
+                resetAutoRotate(); // Reset timer when user manually clicks
+            });
             dotsContainer.appendChild(dot);
         }
         
@@ -724,6 +733,25 @@
             currentIndex = index;
             updateCarousel();
         }
+
+		function nextSlide() {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop back to beginning
+            }
+            updateCarousel();
+        }
+        
+        function resetAutoRotate() {
+            // Clear existing interval
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+            // Start new interval
+            autoRotateInterval = setInterval(nextSlide, 5000);
+        }
+        
         
         // Remove old event listeners by cloning buttons
         const newPrevBtn = prevBtn.cloneNode(true);
@@ -736,26 +764,46 @@
             if (currentIndex > 0) {
                 currentIndex--;
                 updateCarousel();
+				resetAutoRotate(); // Reset timer when user manually clicks
             }
         });
         
-        newNextBtn.addEventListener('click', () => {
+               newNextBtn.addEventListener('click', () => {
             if (currentIndex < totalSlides - 1) {
                 currentIndex++;
-                updateCarousel();
+            } else {
+                currentIndex = 0; // Allow looping
             }
+            updateCarousel();
+            resetAutoRotate(); // Reset timer when user manually clicks
+        });
+        
+        // Pause auto-rotate when user hovers over carousel
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        carouselWrapper.addEventListener('mouseenter', () => {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+            }
+        });
+        
+        carouselWrapper.addEventListener('mouseleave', () => {
+            resetAutoRotate();
         });
         
         // Initialize
         updateCarousel();
+        
+        // Start auto-rotation
+        autoRotateInterval = setInterval(nextSlide, 5000); // 5000ms = 5 seconds
     }
     
     // Initialize carousel on page load
-    initCarousel()
+    initCarousel();
 </script>
 </body>
 
 </html>
+
 
 
 

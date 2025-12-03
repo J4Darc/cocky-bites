@@ -60,6 +60,7 @@
         </div>
       </article>
     </div>
+  </section>
   
 
   <!-- Restaurant Buttons -->
@@ -90,7 +91,7 @@
             <li>Monday–Thursday: 7:30 a.m. – 11 p.m.</li>
             <li>Friday: 7:30 a.m. – 6 p.m.</li>
             <li>Saturday: 11 a.m. – 4 p.m.</li>
-            <li>Sunday: 11 a.m. – 11 p.m.</li>s
+            <li>Sunday: 11 a.m. – 11 p.m.</li>
           </ul>
           <p><strong>Features:</strong> Full Starbucks menu</p>
           <p><strong>Payment:</strong> Accepts Carolina Cash or Carolina Swipe</p>
@@ -103,29 +104,9 @@
           <button class="star" type="button" data-value="4">★</button>
           <button class="star" type="button" data-value="5">★</button>
         </div>
-        <script>
-          const stars = document.querySelectorAll('.star');
-          const starsContainer = document.querySelector('.stars');
-      
-          stars.forEach(star => {
-            star.addEventListener('click', () => {
-              const value = parseInt(star.getAttribute('data-value'));
-              starsContainer.setAttribute('data-rating', value);
-      
-              // Light up all stars up to clicked one
-              stars.forEach(s => {
-                if (parseInt(s.getAttribute('data-value')) <= value) {
-                  s.classList.add('active');
-                } else {
-                  s.classList.remove('active');
-                }
-              });
-            });
-          });
-        </script>
-
-
-    </section>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="cocky-footer">
@@ -150,6 +131,7 @@
 
 </body>
 </html>
+
 
 
 

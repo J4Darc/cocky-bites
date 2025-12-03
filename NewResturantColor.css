@@ -201,6 +201,13 @@ header {
   margin-top: 10px;
 }
 
+.desc-box:hover {
+  border-color: #89262C;       /* change border color */
+  background-color: #F0F0F0;   /* add a background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* subtle shadow */
+  transform: scale(1.02);      /* slight zoom effect */
+}
+
 /* ========== Ratings ========== */
 
 

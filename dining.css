@@ -127,3 +127,12 @@
   cursor: pointer;
   border-radius: 8px;
   transition: backgr
+  .no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;     
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+

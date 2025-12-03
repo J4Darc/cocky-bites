@@ -10,10 +10,10 @@
 
 /* Home title — "Bite In, Gamecocks" */
 .home-title {
-  font-size: 3rem;  
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 15px;
-  color: #760000;           /* FIXED — same garnet as other headers */
+  color: #4E0000 !important;   /* EXACT SAME GARNET as dining halls */
   font-family: inherit;
 }
 
@@ -37,7 +37,7 @@
 }
 
 /*──────────────────────────*/
-/* LATEST UPDATES HEADER */
+/* LATEST UPDATES TITLE */
 /*──────────────────────────*/
 .latest-updates h3 {
   text-align: center;
@@ -45,27 +45,37 @@
   font-weight: 800;
   margin-top: 50px;
   margin-bottom: 18px;
-  color: #760000;           /* matches the title now */
+  color: black !important;   /* FIXED — now BLACK */
 }
 
-/* “Tap to expand” centered */
+/* "(tap to expand)" text */
 .tap-hint {
   text-align: center;
   font-size: 1rem;
   font-style: italic;
-  color: #444;
+  color: #555;
   margin-top: 10px;
-  width: 100%;
+  margin-bottom: 15px;
 }
 
 /*──────────────────────────*/
-/* Update button cards */
+/* Update dropdown system */
 /*──────────────────────────*/
+.updates-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 5px;
+}
+
+/* Each collapsible line */
 .update-item {
   width: 100%;
   max-width: 730px;
 }
 
+/* The clickable red buttons */
 .update-card {
   background: #760000;
   color: white;
@@ -76,17 +86,19 @@
   border: none;
   cursor: pointer;
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 700;          /* BOLD — fixed */
+  letter-spacing: 0.3px;
   font-family: inherit;
   transition: transform 0.20s ease, background 0.20s ease;
 }
 
+/* On hover */
 .update-card:hover {
   background: #520000;
   transform: scale(1.01);
 }
 
-/* Dropdown content */
+/* The revealed text section */
 .update-content {
   display: none;
   background: #f2f2f2;
@@ -101,36 +113,24 @@
 }
 
 /*──────────────────────────*/
-/* Updates container */
-/*──────────────────────────*/
-.updates-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  margin-top: 18px;
-}
-
-/*──────────────────────────*/
 /* Mobile formatting */
 /*──────────────────────────*/
 @media (max-width: 650px) {
   .home-title {
     font-size: 2.4rem;
   }
+
   .home-text {
     font-size: 1.15rem;
     padding: 0 14px;
   }
+
   .home-image {
     width: 95%;
   }
+
   .update-card {
     font-size: 1.05rem;
-  }
-
-  .tap-hint {
-    font-size: 0.95rem;
   }
 
   .latest-updates h3 {

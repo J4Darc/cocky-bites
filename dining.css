@@ -136,3 +136,17 @@
   display: none; 
 }
 
+/* force gallery to show only one image at a time */
+.scroll-gallery {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+/* each image takes full width */
+.scroll-gallery img {
+  width: 100%;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
